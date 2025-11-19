@@ -1,0 +1,18 @@
+
+server:
+  port: 9090
+
+spring:
+  application:
+    name: logistique
+
+  profiles:
+    active: qa
+
+logging:
+  level:
+    root: INFO
+    com.livraison.demo: DEBUG
+
+
+
