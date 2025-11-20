@@ -1,8 +1,8 @@
 pipeline {
     agent {
         docker {
-            image 'maven:3.8.5-openjdk-17'  // صورة Maven مع JDK 17
-            args '-v /root/.m2:/root/.m2 -v /var/run/docker.sock:/var/run/docker.sock'
+            image 'maven:3.8.5-openjdk-17'
+            args '--rm -v $PWD:/app -w /app -v /var/run/docker.sock:/var/run/docker.sock'
         }
     }
     environment {
