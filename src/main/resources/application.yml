@@ -1,7 +1,3 @@
-
-server:
-  port: 9090
-
 spring:
   application:
     name: logistique
@@ -9,10 +5,9 @@ spring:
   profiles:
     active: qa
 
-logging:
-  level:
-    root: INFO
-    com.livraison.demo: DEBUG
 
 
-
+# JWT config pour plus tard
+# jwt:
+#   secret: ma_super_secret_key_123456
+#   expiration-ms: 3600000

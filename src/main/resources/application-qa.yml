@@ -1,9 +1,9 @@
-
 spring:
   data:
     mongodb:
-      uri: mongodb://gestion-colis:123456@localhost:27017/colisdb
+      uri:  ${SPRING_DATA_MONGODB_URI}
 
-jwt:
-  secret: your_jwt_secret_here
-  expiration-ms: 3600000
+logging:
+  level:
+    root: INFO
+    com.example.logistique: DEBUG
