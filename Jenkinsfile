@@ -1,5 +1,6 @@
 pipeline {
     agent any
+
     environment {
         DOCKERHUB_USER = "moustir"
         APP_NAME = "gestion-colis"
@@ -13,11 +14,13 @@ pipeline {
         }
 
         stage('Build JAR') {
+            tools {
+                jdk 'jdk17'
+                maven 'maven3'
+            }
             steps {
                 sh 'mvn clean package -DskipTests'
             }
         }
-
-
     }
 }
