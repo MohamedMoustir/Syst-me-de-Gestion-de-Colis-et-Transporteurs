@@ -1,9 +1,9 @@
 pipeline {
     agent any
 
-    environment {
-        DOCKERHUB_USER = "moustir"
-        APP_NAME = "gestion-colis"
+    tools {
+        jdk 'jdk17'
+        maven 'maven3'
     }
 
     stages {
@@ -12,6 +12,7 @@ pipeline {
                 git branch: 'main', url: 'https://github.com/MohamedMoustir/Syst-me-de-Gestion-de-Colis-et-Transporteurs.git'
             }
         }
+
         stage('Run Tests') {
             steps {
                 sh 'mvn test'
@@ -19,10 +20,6 @@ pipeline {
         }
 
         stage('Build JAR') {
-            tools {
-                jdk 'jdk17'
-                maven 'maven3'
-            }
             steps {
                 sh 'mvn clean package -DskipTests'
             }
@@ -30,11 +27,8 @@ pipeline {
     }
 
     post {
-        success {
-            echo " Build & Tests passed successfully!"
-        }
         failure {
-            echo " Build or Tests failed!"
+            echo "Build or Tests failed!"
         }
     }
 }
