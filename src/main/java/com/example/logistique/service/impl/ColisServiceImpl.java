@@ -76,7 +76,7 @@ public class ColisServiceImpl  {
         } else {
             result = colisRepository.findAll(pageable).getContent();
         }
-        return result.stream().map(ColisMappe::toDTO).collect(Collectors.toList());
+        return result.stream().map(ColisMapper::toDTO).collect(Collectors.toList());
     }
 //    public List<ColisDTO> searchColisByAdresse(String adresse, int page, int size) {
 //        PageRequest pageable = PageRequest.of(page, size);
