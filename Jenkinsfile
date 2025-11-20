@@ -23,19 +23,6 @@ pipeline {
             }
         }
 
-        stage('Docker Build') {
-            steps {
-                sh "docker build -t ${DOCKERHUB_USER}/${APP_NAME}:latest ."
-            }
-        }
 
-        stage('Docker Push') {
-            steps {
-                withCredentials([usernamePassword(credentialsId: 'docker-hub-credentials', usernameVariable: 'USER', passwordVariable: 'PASS')]) {
-                    sh "echo $PASS | docker login -u $USER --password-stdin"
-                    sh "docker push ${DOCKERHUB_USER}/${APP_NAME}:latest"
-                }
-            }
-        }
     }
 }
