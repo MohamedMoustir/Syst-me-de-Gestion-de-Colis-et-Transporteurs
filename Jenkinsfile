@@ -21,10 +21,22 @@ pipeline {
             }
         }
     }
-
+    stage('Expose via ngrok') {
+        steps {
+            sh '''
+        nohup ngrok http 8081 > ngrok.log 2>&1 &
+        sleep 5
+        echo "Public URL:"
+        cat ngrok.log | grep -o "https://[a-z0-9.-]*\\.ngrok-free\\.dev"
+        '''
+        }
+    }
     post {
         failure {
             echo "Build or Tests failed!"
         }
     }
+
+
+
 }
