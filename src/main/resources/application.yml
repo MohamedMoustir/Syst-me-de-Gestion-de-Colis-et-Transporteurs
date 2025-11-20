@@ -3,7 +3,7 @@ spring:
     name: logistique
 
   profiles:
-    active: qa
+    active: prod
 
 
 
