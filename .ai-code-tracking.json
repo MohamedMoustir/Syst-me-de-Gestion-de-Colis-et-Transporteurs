@@ -1166,12 +1166,34 @@
       "aiTool": "AI Assistant",
       "detectionMethod": "REALTIME_SPEED_ANALYSIS",
       "lineCount": 25
+    },
+    {
+      "filePath": "C:/Users/safiy/Downloads/gestion-colis/gestion-colis/src/main/java/com/example/logistique/controller/admin/UserAdminController.java",
+      "timestamp": 1763751107884,
+      "startOffset": 228,
+      "endOffset": 267,
+      "codeContent": "@RestController\n@RequestMapping(\"/api\")",
+      "aiProbability": 90,
+      "aiTool": "AI Assistant",
+      "detectionMethod": "REALTIME_SPEED_ANALYSIS",
+      "lineCount": 2
+    },
+    {
+      "filePath": "C:/Users/safiy/Downloads/gestion-colis/gestion-colis/src/main/java/com/example/logistique/controller/auth/AuthController.java",
+      "timestamp": 1763751175416,
+      "startOffset": 375,
+      "endOffset": 469,
+      "codeContent": "public AuthController(AuthService authService) {\n        this.authService \u003d authService;\n    }",
+      "aiProbability": 90,
+      "aiTool": "AI Assistant",
+      "detectionMethod": "REALTIME_SPEED_ANALYSIS",
+      "lineCount": 3
     }
   ],
   "toolStats": {
     "AI Assistant": {
-      "usageCount": 106,
-      "totalLines": 228
+      "usageCount": 108,
+      "totalLines": 233
     }
   }
 }
