@@ -17,6 +17,7 @@ public class AuthController {
 
     @PostMapping("/signup")
     public ResponseEntity<?> signup(@RequestBody SignupRequest request){
+        System.out.println("eeeeeeeeeeeeeeee");
         String token = authService.signup(request);
         return ResponseEntity.ok("JWT Token: " + token);
     }
