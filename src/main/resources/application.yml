@@ -8,5 +8,5 @@ spring:
 
 security:
   jwt:
-    secret-key: ""
+    secret-key: "ThisIsAVeryLongAndSecureSecretKeyForJWTAuthThatNeedsToBeAtLeast32Characters1234"
     expiration: 3600000
