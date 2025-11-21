@@ -8,13 +8,10 @@ pipeline {
 
     stages {
 
-        stage('Clean Workspace') {
-            steps {
-                deleteDir()
-            }
-        }
+
         stage('Checkout') {
             steps {
+                deleteDir()
                 git branch: 'main',
                         url: 'https://github.com/MohamedMoustir/Syst-me-de-Gestion-de-Colis-et-Transporteurs.git'
             }
