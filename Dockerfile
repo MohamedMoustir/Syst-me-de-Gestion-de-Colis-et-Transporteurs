@@ -1,17 +1,17 @@
-# Dockerfile for Jenkins with Maven + Docker + Docker Compose
-FROM jenkins/jenkins:lts
 
-USER root
+FROM eclipse-temurin:17-jdk-jammy AS build
 
-RUN apt-get update && \
-    apt-get install -y sudo curl git docker.io docker-compose maven && \
-    rm -rf /var/lib/apt/lists/*
+WORKDIR /app
 
-RUN usermod -aG docker jenkins
+COPY pom.xml .
+COPY src ./src
 
-USER jenkins
+RUN ./mvnw clean package -DskipTests
 
-RUN jenkins-plugin-cli --plugins workflow-aggregator docker-workflow blueocean
+FROM eclipse-temurin:17-jre-alpine
 
-# exposed ports
-EXPOSE 8080 50000
+WORKDIR /app
+
+COPY --from=build /app/target/gestion-colis-0.0.1-SNAPSHOT.jar app.jar
+
+ENTRYPOINT ["java", "-jar", "app.jar"]
