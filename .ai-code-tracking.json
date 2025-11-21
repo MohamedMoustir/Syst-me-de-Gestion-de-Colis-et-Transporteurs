@@ -1155,12 +1155,23 @@
       "aiTool": "AI Assistant",
       "detectionMethod": "REALTIME_SPEED_ANALYSIS",
       "lineCount": 1
+    },
+    {
+      "filePath": "C:/Users/safiy/Downloads/gestion-colis/gestion-colis/src/main/java/com/example/logistique/repository/UserRepository.java",
+      "timestamp": 1763734929245,
+      "startOffset": 552,
+      "endOffset": 756,
+      "codeContent": "Page\u003cUser\u003e findByRole(Role role, Pageable pageable);\n\n    Page\u003cUser\u003e findByRoleAndTransporteurInfoSpecialite(\n            Role role,\n            Specialite specialite,\n            Pageable pageable\n    );",
+      "aiProbability": 95,
+      "aiTool": "AI Assistant",
+      "detectionMethod": "REALTIME_SPEED_ANALYSIS",
+      "lineCount": 7
     }
   ],
   "toolStats": {
     "AI Assistant": {
-      "usageCount": 105,
-      "totalLines": 203
+      "usageCount": 106,
+      "totalLines": 210
     }
   }
 }
