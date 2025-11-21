@@ -8,7 +8,18 @@ pipeline {
 
     stages {
 
-
+        stage('Checkout') {
+            steps {
+                checkout([
+                        $class: 'GitSCM',
+                        branches: [[name: '*/main']],
+                        userRemoteConfigs: [[
+                                                    url: 'https://github.com/MohamedMoustir/Syst-me-de-Gestion-de-Colis-et-Transporteurs.git',
+                                                    credentialsId: 'github-token'
+                                            ]]
+                ])
+            }
+        }
 
         stage('Build JAR') {
             steps {
