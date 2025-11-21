@@ -19,7 +19,6 @@ public class ColisController {
 
     @PostMapping("/admin/colis")
     public ColisDTO createColis(@RequestBody ColisDTO colisDTO) {
-        System.out.println("zzzzzzzzzz");
         return colisService.createColis(colisDTO);
     }
 

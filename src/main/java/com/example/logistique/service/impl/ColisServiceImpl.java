@@ -29,8 +29,10 @@ public class ColisServiceImpl  {
     public ColisDTO updateColis(String id, ColisDTO colisDTO) {
         Colis colis = colisRepository.findById(id)
                 .orElseThrow(() -> new RuntimeException("Colis not found"));
+
         colis.setAdresseDestination(colisDTO.getAdresseDestination());
         colis.setPoids(colisDTO.getPoids());
+
         if (colisDTO.getType() != null) {
             colis.setType(ColisType.valueOf(colisDTO.getType()));
         }
@@ -62,6 +64,7 @@ public class ColisServiceImpl  {
         return ColisMapper.toDTO(colis);
     }
 
+
     public List<ColisDTO> listColis(Optional<ColisType> type, Optional<StatutColis> statut, int page, int size) {
         PageRequest pageable = PageRequest.of(page, size);
         List<Colis> result;
@@ -78,6 +81,7 @@ public class ColisServiceImpl  {
         }
         return result.stream().map(ColisMapper::toDTO).collect(Collectors.toList());
     }
+
     public List<ColisDTO> searchColisByAdresse(String adresse, int page, int size) {
         PageRequest pageable = PageRequest.of(page, size);
         return colisRepository.findByAdresseDestinationContainingIgnoreCase(adresse, pageable)
