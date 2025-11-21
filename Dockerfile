@@ -1,18 +1,17 @@
-# === Stage 1: Build ===
-FROM maven:3.9.4-eclipse-temurin-17-alpine AS build
-WORKDIR /app
+# Dockerfile for Jenkins with Maven + Docker + Docker Compose
+FROM jenkins/jenkins:lts
 
-COPY pom.xml .
-RUN mvn dependency:go-offline
+USER root
 
-COPY src ./src
-RUN mvn clean package -DskipTests
+RUN apt-get update && \
+    apt-get install -y sudo curl git docker.io docker-compose maven && \
+    rm -rf /var/lib/apt/lists/*
 
-# === Stage 2: Run ===
-FROM eclipse-temurin:17-jdk-alpine
-WORKDIR /app
+RUN usermod -aG docker jenkins
 
-COPY --from=build /app/target/gestion-colis-0.0.1-SNAPSHOT.jar app.jar
+USER jenkins
 
-EXPOSE 8080
-ENTRYPOINT ["java","-jar","app.jar"]
+RUN jenkins-plugin-cli --plugins workflow-aggregator docker-workflow blueocean
+
+# exposed ports
+EXPOSE 8080 50000
