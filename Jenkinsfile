@@ -10,14 +10,8 @@ pipeline {
 
         stage('Checkout') {
             steps {
-                checkout([
-                        $class: 'GitSCM',
-                        branches: [[name: '*/main']],
-                        userRemoteConfigs: [[
-                                                    url: 'https://github.com/MohamedMoustir/Syst-me-de-Gestion-de-Colis-et-Transporteurs.git',
-                                                    credentialsId: 'github-token'
-                                            ]]
-                ])
+                git branch: 'main',
+                        url: 'https://github.com/MohamedMoustir/Syst-me-de-Gestion-de-Colis-et-Transporteurs.git'
             }
         }
 
