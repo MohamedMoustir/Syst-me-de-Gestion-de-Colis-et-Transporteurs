@@ -11,7 +11,8 @@ import java.util.Optional;
 
 public interface UserRepository extends MongoRepository<User,String> {
 
-//    Optional<User> findByLogin(String login);
-//    Page<User> findAllByRole(Role role, Pageable pageable);
-//    List<User> findAllByTransporteurProfile_Specialite(Specialite specialite, Pageable pageable);
+    Optional<User> findByLogin(String login);
+    boolean existsByLogin(String login);
+Page<User> findAllByRole(Role role, Pageable pageable);
+    List<User> findAllByTransporteurProfile_Specialite(Specialite specialite, Pageable pageable);
 }
