@@ -17,7 +17,6 @@ public class UserMapper {
                 .role(entity.getRole() != null ? entity.getRole().name() : null)
                 .active(entity.isActive())
 
-                // TRANSPORTEUR ONLY
                 .statut(entity.getTransporteurInfo() != null ?
                         entity.getTransporteurInfo().getStatut().name() : null)
 

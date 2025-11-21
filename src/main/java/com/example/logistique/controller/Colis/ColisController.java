@@ -17,25 +17,6 @@ public class ColisController {
     @Autowired
     private ColisServiceImpl colisService;
 
-    @PostMapping("/admin/colis")
-    public ColisDTO createColis(@RequestBody ColisDTO colisDTO) {
-        return colisService.createColis(colisDTO);
-    }
-
-    @PutMapping("/admin/colis/{id}")
-    public ColisDTO updateColis(@PathVariable String id, @RequestBody ColisDTO colisDTO) {
-        return colisService.updateColis(id, colisDTO);
-    }
-
-    @DeleteMapping("/admin/colis/{id}")
-    public void deleteColis(@PathVariable String id) {
-        colisService.deleteColis(id);
-    }
-
-    @PatchMapping("/admin/colis/{id}/assign")
-    public ColisDTO assignTransporteur(@PathVariable String id, @RequestParam String transporteurId) {
-        return colisService.assignTransporteur(id, transporteurId);
-    }
 
     @PatchMapping("/colis/{id}/statut")
     public ColisDTO updateStatut(@PathVariable String id, @RequestParam StatutColis statut) {
