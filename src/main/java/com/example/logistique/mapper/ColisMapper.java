@@ -4,7 +4,9 @@ import com.example.logistique.dto.ColisDTO;
 import com.example.logistique.enums.ColisType;
 import com.example.logistique.enums.StatutColis;
 import com.example.logistique.model.Colis;
+import org.springframework.stereotype.Component;
 
+@Component
 public class ColisMapper {
 
     public static ColisDTO toDTO(Colis entity) {

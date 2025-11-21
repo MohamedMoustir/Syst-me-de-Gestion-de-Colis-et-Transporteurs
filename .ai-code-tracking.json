@@ -1265,12 +1265,78 @@
       "aiTool": "AI Assistant",
       "detectionMethod": "REALTIME_SPEED_ANALYSIS",
       "lineCount": 1
+    },
+    {
+      "filePath": "C:/Users/safiy/Downloads/gestion-colis/gestion-colis/src/main/java/com/example/logistique/service/impl/AuthService.java",
+      "timestamp": 1763754679049,
+      "startOffset": 401,
+      "endOffset": 447,
+      "codeContent": "import org.springframework.stereotype.Service;",
+      "aiProbability": 90,
+      "aiTool": "AI Assistant",
+      "detectionMethod": "REALTIME_SPEED_ANALYSIS",
+      "lineCount": 1
+    },
+    {
+      "filePath": "/UserMapper.java",
+      "timestamp": 1763755026471,
+      "startOffset": 282,
+      "endOffset": 302,
+      "codeContent": "IntellijIdeaRulezzz ",
+      "aiProbability": 90,
+      "aiTool": "AI Assistant",
+      "detectionMethod": "REALTIME_SPEED_ANALYSIS",
+      "lineCount": 1
+    },
+    {
+      "filePath": "C:/Users/safiy/Downloads/gestion-colis/gestion-colis/src/main/java/com/example/logistique/mapper/UserMapper.java",
+      "timestamp": 1763755027903,
+      "startOffset": 270,
+      "endOffset": 318,
+      "codeContent": "import org.springframework.stereotype.Component;",
+      "aiProbability": 90,
+      "aiTool": "AI Assistant",
+      "detectionMethod": "REALTIME_SPEED_ANALYSIS",
+      "lineCount": 1
+    },
+    {
+      "filePath": "/ColisMapper.java",
+      "timestamp": 1763755031815,
+      "startOffset": 234,
+      "endOffset": 254,
+      "codeContent": "IntellijIdeaRulezzz ",
+      "aiProbability": 90,
+      "aiTool": "AI Assistant",
+      "detectionMethod": "REALTIME_SPEED_ANALYSIS",
+      "lineCount": 1
+    },
+    {
+      "filePath": "C:/Users/safiy/Downloads/gestion-colis/gestion-colis/src/main/java/com/example/logistique/mapper/ColisMapper.java",
+      "timestamp": 1763755032564,
+      "startOffset": 225,
+      "endOffset": 256,
+      "codeContent": "org.springframework.stereotype.",
+      "aiProbability": 70,
+      "aiTool": "AI Assistant",
+      "detectionMethod": "REALTIME_SPEED_ANALYSIS",
+      "lineCount": 1
+    },
+    {
+      "filePath": "C:/Users/safiy/Downloads/gestion-colis/gestion-colis/src/main/java/com/example/logistique/mapper/ColisMapper.java",
+      "timestamp": 1763755032577,
+      "startOffset": 222,
+      "endOffset": 270,
+      "codeContent": "import org.springframework.stereotype.Component;",
+      "aiProbability": 90,
+      "aiTool": "AI Assistant",
+      "detectionMethod": "REALTIME_SPEED_ANALYSIS",
+      "lineCount": 1
     }
   ],
   "toolStats": {
     "AI Assistant": {
-      "usageCount": 115,
-      "totalLines": 245
+      "usageCount": 121,
+      "totalLines": 251
     }
   }
 }

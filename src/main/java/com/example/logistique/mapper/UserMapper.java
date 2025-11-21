@@ -5,7 +5,9 @@ import com.example.logistique.enums.Role;
 import com.example.logistique.enums.Specialite;
 import com.example.logistique.enums.StatutTransporteur;
 import com.example.logistique.model.User;
+import org.springframework.stereotype.Component;
 
+@Component
 public class UserMapper {
 
     public static UserDTO toDTO(User entity) {
