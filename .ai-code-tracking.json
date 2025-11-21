@@ -1155,12 +1155,23 @@
       "aiTool": "AI Assistant",
       "detectionMethod": "REALTIME_SPEED_ANALYSIS",
       "lineCount": 1
+    },
+    {
+      "filePath": "C:/Users/safiy/Downloads/gestion-colis/gestion-colis/src/main/java/com/example/logistique/controller/auth/AuthController.java",
+      "timestamp": 1763735136341,
+      "startOffset": 57,
+      "endOffset": 836,
+      "codeContent": "com.example.logistique.dto.SignupRequest;\nimport com.example.logistique.service.impl.AuthService;\nimport org.springframework.http.ResponseEntity;\nimport org.springframework.web.bind.annotation.*;\n\n\n\n@RestController\n@RequestMapping(\"/api/auth\")\npublic class AuthController {\n\n    private  AuthService authService;\n\n    @PostMapping(\"/signup\")\n    public ResponseEntity\u003c?\u003e signup(@RequestBody SignupRequest request){\n        String token \u003d authService.signup(request);\n        return ResponseEntity.ok(\"JWT Token: \" + token);\n\n    }\n\n    @PostMapping(\"/login\")\n    public ResponseEntity\u003c?\u003e login(@RequestBody SignupRequest request) {\n        String token \u003d authService.login(request.getLogin(), request.getPassword());\n        return ResponseEntity.ok(\"JWT Token: \" + token);\n    }",
+      "aiProbability": 95,
+      "aiTool": "AI Assistant",
+      "detectionMethod": "REALTIME_SPEED_ANALYSIS",
+      "lineCount": 25
     }
   ],
   "toolStats": {
     "AI Assistant": {
-      "usageCount": 105,
-      "totalLines": 203
+      "usageCount": 106,
+      "totalLines": 228
     }
   }
 }
