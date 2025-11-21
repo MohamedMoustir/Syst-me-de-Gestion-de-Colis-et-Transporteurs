@@ -6,8 +6,7 @@ spring:
     active: prod
 
 
-
-# JWT config pour plus tard
-# jwt:
-#   secret: ma_super_secret_key_123456
-#   expiration-ms: 3600000
+security:
+  jwt:
+    secret-key: ""
+    expiration: 3600000
