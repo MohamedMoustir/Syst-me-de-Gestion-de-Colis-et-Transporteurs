@@ -7,7 +7,9 @@ import com.example.logistique.model.User;
 import com.example.logistique.repository.UserRepository;
 import com.example.logistique.security.JwtUtil;
 import org.springframework.security.crypto.password.PasswordEncoder;
+import org.springframework.stereotype.Service;
 
+@Service
 public class AuthService {
 
     private final UserRepository userRepository;

@@ -1254,12 +1254,23 @@
       "aiTool": "AI Assistant",
       "detectionMethod": "REALTIME_SPEED_ANALYSIS",
       "lineCount": 1
+    },
+    {
+      "filePath": "/AuthService.java",
+      "timestamp": 1763754677700,
+      "startOffset": 411,
+      "endOffset": 431,
+      "codeContent": "IntellijIdeaRulezzz ",
+      "aiProbability": 90,
+      "aiTool": "AI Assistant",
+      "detectionMethod": "REALTIME_SPEED_ANALYSIS",
+      "lineCount": 1
     }
   ],
   "toolStats": {
     "AI Assistant": {
-      "usageCount": 114,
-      "totalLines": 244
+      "usageCount": 115,
+      "totalLines": 245
     }
   }
 }
