@@ -11,12 +11,34 @@
       "aiTool": "AI Assistant",
       "detectionMethod": "REALTIME_SPEED_ANALYSIS",
       "lineCount": 1
+    },
+    {
+      "filePath": "C:/Users/safiy/Downloads/gestion-colis/gestion-colis/src/main/java/com/example/logistique/controller/WebhookController.java",
+      "timestamp": 1763716680422,
+      "startOffset": 0,
+      "endOffset": 79,
+      "codeContent": "package com.example.logistique.controller;\n\npublic class WebhookController {\n}\n",
+      "aiProbability": 90,
+      "aiTool": "AI Assistant",
+      "detectionMethod": "REALTIME_SPEED_ANALYSIS",
+      "lineCount": 5
+    },
+    {
+      "filePath": "C:/Users/safiy/Downloads/gestion-colis/gestion-colis/src/main/java/com/example/logistique/controller/WebhookController.java",
+      "timestamp": 1763716687759,
+      "startOffset": 0,
+      "endOffset": 309,
+      "codeContent": "@RestController\npublic class WebhookController {\n\n    @PostMapping(\"/github-webhook\")\n    public ResponseEntity\u003cString\u003e handleWebhook(@RequestBody String payload) {\n        System.out.println(\"\\n\u003d\u003d\u003d\u003d\u003d WEBHOOK RECEIVED \u003d\u003d\u003d\u003d\u003d\");\n        System.out.println(payload);\n        return ResponseEntity.ok(\"OK\");\n    }",
+      "aiProbability": 70,
+      "aiTool": "AI Assistant",
+      "detectionMethod": "REALTIME_SPEED_ANALYSIS",
+      "lineCount": 9
     }
   ],
   "toolStats": {
     "AI Assistant": {
-      "usageCount": 1,
-      "totalLines": 1
+      "usageCount": 3,
+      "totalLines": 15
     }
   }
 }
