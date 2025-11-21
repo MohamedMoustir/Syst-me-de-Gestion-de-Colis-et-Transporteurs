@@ -1342,12 +1342,34 @@
       "aiTool": "AI Assistant",
       "detectionMethod": "REALTIME_SPEED_ANALYSIS",
       "lineCount": 1
+    },
+    {
+      "filePath": "C:/Users/safiy/Downloads/gestion-colis/gestion-colis/src/main/java/com/example/logistique/config/SecurityConfig.java",
+      "timestamp": 1763756812369,
+      "startOffset": 1186,
+      "endOffset": 1217,
+      "codeContent": "AbstractHttpConfigurer::disable",
+      "aiProbability": 90,
+      "aiTool": "AI Assistant",
+      "detectionMethod": "REALTIME_SPEED_ANALYSIS",
+      "lineCount": 1
+    },
+    {
+      "filePath": "C:/Users/safiy/Downloads/gestion-colis/gestion-colis/src/main/java/com/example/logistique/config/SecurityConfig.java",
+      "timestamp": 1763756819788,
+      "startOffset": 493,
+      "endOffset": 586,
+      "codeContent": "import org.springframework.security.config.annotation.web.configurers.AbstractHttpConfigurer;",
+      "aiProbability": 90,
+      "aiTool": "AI Assistant",
+      "detectionMethod": "REALTIME_SPEED_ANALYSIS",
+      "lineCount": 1
     }
   ],
   "toolStats": {
     "AI Assistant": {
-      "usageCount": 122,
-      "totalLines": 252
+      "usageCount": 124,
+      "totalLines": 254
     }
   }
 }
