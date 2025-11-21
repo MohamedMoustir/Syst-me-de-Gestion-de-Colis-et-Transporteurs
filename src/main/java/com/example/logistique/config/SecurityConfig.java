@@ -1,8 +1,6 @@
 package com.example.logistique.config;
 
 import com.example.logistique.security.JwtFilter;
-import com.example.logistique.security.JwtUtil;
-import jakarta.servlet.Filter;
 import lombok.RequiredArgsConstructor;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;

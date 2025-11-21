@@ -1364,12 +1364,23 @@
       "aiTool": "AI Assistant",
       "detectionMethod": "REALTIME_SPEED_ANALYSIS",
       "lineCount": 1
+    },
+    {
+      "filePath": "C:/Users/safiy/Downloads/gestion-colis/gestion-colis/src/main/java/com/example/logistique/security/JwtFilter.java",
+      "timestamp": 1763758034088,
+      "startOffset": 646,
+      "endOffset": 704,
+      "codeContent": "    private static final String AUTH_PATH \u003d \"/api/auth/\";\n",
+      "aiProbability": 90,
+      "aiTool": "AI Assistant",
+      "detectionMethod": "REALTIME_SPEED_ANALYSIS",
+      "lineCount": 2
     }
   ],
   "toolStats": {
     "AI Assistant": {
-      "usageCount": 124,
-      "totalLines": 254
+      "usageCount": 125,
+      "totalLines": 256
     }
   }
 }
