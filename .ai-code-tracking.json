@@ -1188,12 +1188,45 @@
       "aiTool": "AI Assistant",
       "detectionMethod": "REALTIME_SPEED_ANALYSIS",
       "lineCount": 3
+    },
+    {
+      "filePath": "C:/Users/safiy/Downloads/gestion-colis/gestion-colis/src/main/java/com/example/logistique/security/JwtUtil.java",
+      "timestamp": 1763752051430,
+      "startOffset": 363,
+      "endOffset": 569,
+      "codeContent": "  // قراءة المفتاح السري الطويل من ملف application.yml/environment\n    @Value(\"${security.jwt.secret-key}\")\n    private String secret;\n\n    @Value(\"${security.jwt.expiration}\")\n    private long expiration; ",
+      "aiProbability": 95,
+      "aiTool": "AI Assistant",
+      "detectionMethod": "REALTIME_SPEED_ANALYSIS",
+      "lineCount": 6
+    },
+    {
+      "filePath": "/JwtUtil.java",
+      "timestamp": 1763752092331,
+      "startOffset": 315,
+      "endOffset": 335,
+      "codeContent": "IntellijIdeaRulezzz ",
+      "aiProbability": 90,
+      "aiTool": "AI Assistant",
+      "detectionMethod": "REALTIME_SPEED_ANALYSIS",
+      "lineCount": 1
+    },
+    {
+      "filePath": "C:/Users/safiy/Downloads/gestion-colis/gestion-colis/src/main/java/com/example/logistique/security/JwtUtil.java",
+      "timestamp": 1763752139544,
+      "startOffset": 145,
+      "endOffset": 203,
+      "codeContent": "import org.springframework.beans.factory.annotation.Value;",
+      "aiProbability": 90,
+      "aiTool": "AI Assistant",
+      "detectionMethod": "REALTIME_SPEED_ANALYSIS",
+      "lineCount": 1
     }
   ],
   "toolStats": {
     "AI Assistant": {
-      "usageCount": 108,
-      "totalLines": 233
+      "usageCount": 111,
+      "totalLines": 241
     }
   }
 }

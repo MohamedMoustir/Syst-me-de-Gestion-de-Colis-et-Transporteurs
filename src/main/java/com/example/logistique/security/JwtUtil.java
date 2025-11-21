@@ -3,6 +3,7 @@ package com.example.logistique.security;
 import io.jsonwebtoken.Claims;
 import io.jsonwebtoken.Jwts;
 import io.jsonwebtoken.SignatureAlgorithm;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Component;
 
 import java.util.Date;
@@ -10,9 +11,12 @@ import java.util.Date;
 @Component
 public class JwtUtil {
 
-    private final String secret = "mySecretKey123";
-    private final long expiration = 1000 * 60 * 60 * 10;
 
+    @Value("${security.jwt.secret-key}")
+    private String secret;
+
+    @Value("${security.jwt.expiration}")
+    private long expiration;
     public String generateToken(String username){
         return Jwts.builder()
                 .setSubject(username)
