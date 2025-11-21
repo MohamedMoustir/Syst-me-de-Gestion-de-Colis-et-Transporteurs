@@ -88,34 +88,12 @@
       "aiTool": "AI Assistant",
       "detectionMethod": "REALTIME_SPEED_ANALYSIS",
       "lineCount": 1
-    },
-    {
-      "filePath": "C:/Users/safiy/Downloads/gestion-colis/gestion-colis/src/main/java/com/example/logistique/mapper/UserMapper.java",
-      "timestamp": 1763721617528,
-      "startOffset": 640,
-      "endOffset": 677,
-      "codeContent": "// TRANSPORTEUR ONLY\n                ",
-      "aiProbability": 90,
-      "aiTool": "AI Assistant",
-      "detectionMethod": "REALTIME_SPEED_ANALYSIS",
-      "lineCount": 2
-    },
-    {
-      "filePath": "C:/Users/safiy/Downloads/gestion-colis/gestion-colis/src/main/java/com/example/logistique/controller/Colis/ColisController.java",
-      "timestamp": 1763721617535,
-      "startOffset": 547,
-      "endOffset": 1257,
-      "codeContent": "    @PostMapping(\"/admin/colis\")\n    public ColisDTO createColis(@RequestBody ColisDTO colisDTO) {\n        return colisService.createColis(colisDTO);\n    }\n\n    @PutMapping(\"/admin/colis/{id}\")\n    public ColisDTO updateColis(@PathVariable String id, @RequestBody ColisDTO colisDTO) {\n        return colisService.updateColis(id, colisDTO);\n    }\n\n    @DeleteMapping(\"/admin/colis/{id}\")\n    public void deleteColis(@PathVariable String id) {\n        colisService.deleteColis(id);\n    }\n\n    @PatchMapping(\"/admin/colis/{id}/assign\")\n    public ColisDTO assignTransporteur(@PathVariable String id, @RequestParam String transporteurId) {\n        return colisService.assignTransporteur(id, transporteurId);\n    }\n",
-      "aiProbability": 95,
-      "aiTool": "AI Assistant",
-      "detectionMethod": "REALTIME_SPEED_ANALYSIS",
-      "lineCount": 20
     }
   ],
   "toolStats": {
     "AI Assistant": {
-      "usageCount": 10,
-      "totalLines": 42
+      "usageCount": 8,
+      "totalLines": 20
     }
   }
 }
