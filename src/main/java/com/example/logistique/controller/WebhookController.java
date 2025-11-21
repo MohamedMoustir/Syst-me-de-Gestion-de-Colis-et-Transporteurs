@@ -11,7 +11,6 @@ public class WebhookController {
     @PostMapping("/github-webhook")
     public ResponseEntity<String> handleWebhook(@RequestBody String payload) {
         System.out.println("\n===== WEBHOOK RECEIVED =====");
-        System.out.println(payload);
         return ResponseEntity.ok("OK");
     }
 }
