@@ -7,16 +7,15 @@ import com.example.logistique.mapper.ColisMapper;
 import com.example.logistique.model.Colis;
 import com.example.logistique.repository.ColisRepository;
 import com.example.logistique.service.impl.ColisServiceImpl;
-import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
 import org.mockito.InjectMocks;
 import org.mockito.Mock;
-import org.mockito.MockitoAnnotations;
 import org.mockito.junit.jupiter.MockitoExtension;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.PageImpl;
 import org.springframework.data.domain.PageRequest;
+import org.springframework.data.domain.Pageable;
 
 import java.util.List;
 import java.util.Optional;
@@ -35,10 +34,6 @@ public class ColisTest {
     @InjectMocks
     private ColisServiceImpl colisService;
 
-    @BeforeEach
-    void setUp() {
-        MockitoAnnotations.openMocks(this);
-    }
 
     @Test
     void test_create_Colis() {
@@ -60,9 +55,9 @@ public class ColisTest {
                 .instructionsManutention("avec précaution")
                 .build();
 
-        when(colisMapper.toEntity(any(ColisDTO.class))).thenReturn(entity);
-        when(colisRepository.save(any(Colis.class))).thenReturn(entity);
-        when(colisMapper.toDTO(any(Colis.class))).thenReturn(dto);
+        when(colisMapper.toEntity(dto)).thenReturn(entity);
+        when(colisRepository.save(entity)).thenReturn(entity);
+        when(colisMapper.toDTO(entity)).thenReturn(dto);
 
         ColisDTO result = colisService.createColis(dto);
 
@@ -74,7 +69,7 @@ public class ColisTest {
     @Test
     void test_listColis() {
 
-        PageRequest pageable = PageRequest.of(0, 2);
+        PageRequest pageable = PageRequest.of(1, 2);
 
         Colis colis1 = Colis.builder()
                 .id("1")
@@ -97,16 +92,23 @@ public class ColisTest {
         ColisDTO dto1 = ColisDTO.builder().id("1").type("FRAGILE").adresseDestination("Casa 1").build();
         ColisDTO dto2 = ColisDTO.builder().id("2").type("FRAGILE").adresseDestination("Casa 2").build();
 
-        when(colisRepository.findByType(any(ColisType.class), eq(pageable))).thenReturn(page);
+
+        when(colisRepository.findByType(any(ColisType.class), any(Pageable.class))).thenReturn(page);
+
         when(colisMapper.toDTO(colis1)).thenReturn(dto1);
         when(colisMapper.toDTO(colis2)).thenReturn(dto2);
 
-        List<ColisDTO> list = colisService.listColis(Optional.of(ColisType.FRAGILE), Optional.of(StatutColis.EN_ATTENTE), 1, 2);
+        List<ColisDTO> list = colisService.listColis(
+                Optional.of(ColisType.FRAGILE),
+                Optional.of(StatutColis.EN_ATTENTE),
+                1,
+                2
+        );
 
         assertEquals(2, list.size());
         assertEquals("1", list.get(0).getId());
         assertEquals("2", list.get(1).getId());
 
-        verify(colisRepository, times(1)).findByType(any(ColisType.class), eq(pageable));
+        verify(colisRepository, times(1)).findByType(any(ColisType.class), any(Pageable.class));
     }
 }

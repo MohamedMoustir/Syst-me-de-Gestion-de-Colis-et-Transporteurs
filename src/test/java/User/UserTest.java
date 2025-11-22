@@ -7,19 +7,15 @@ import com.example.logistique.mapper.UserMapper;
 import com.example.logistique.model.User;
 import com.example.logistique.repository.UserRepository;
 import com.example.logistique.service.impl.UserServiceImpl;
-import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
 import org.mockito.InjectMocks;
 import org.mockito.Mock;
-import org.mockito.MockitoAnnotations;
 import org.mockito.junit.jupiter.MockitoExtension;
 
 import static org.mockito.Mockito.*;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
-import static org.mockito.Mockito.verify;
-import static org.mockito.Mockito.when;
 
 @ExtendWith(MockitoExtension.class)
 public class UserTest {
@@ -32,10 +28,6 @@ public class UserTest {
     @InjectMocks
     private UserServiceImpl userService;
 
-    @BeforeEach
-    void setUp(){
-        MockitoAnnotations.openMocks(this);
-    }
 
     @Test
     void test_create_User(){
@@ -56,15 +48,15 @@ public class UserTest {
                 .role(Role.ROLE_TRANSPORTEUR.name())
                 .build();
 
-        when(userMapper.toEntity(any(UserDTO.class))).thenReturn(userEntity);
+        when(userMapper.toEntity(userDTO)).thenReturn(userEntity);
         when(userRepository.save(any(User.class))).thenReturn(userEntity);
-        when(userMapper.toDTO(any(User.class))).thenReturn(userDTO);
+        when(userMapper.toDTO(userEntity)).thenReturn(userDTO);
 
         UserDTO result = userService.createUser(userDTO);
 
         verify(userRepository).save(any(User.class));
+
         assertEquals("transporteur99", result.getLogin());
         assertEquals("123", result.getId());
-
     }
 }
