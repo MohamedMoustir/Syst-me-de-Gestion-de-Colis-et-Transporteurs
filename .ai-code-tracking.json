@@ -3993,12 +3993,23 @@
       "aiTool": "AI Assistant",
       "detectionMethod": "REALTIME_SPEED_ANALYSIS",
       "lineCount": 2
+    },
+    {
+      "filePath": "C:/Users/safiy/Downloads/gestion-colis/gestion-colis/src/test/java/User/UserTest.java",
+      "timestamp": 1763830404341,
+      "startOffset": 1450,
+      "endOffset": 2193,
+      "codeContent": "userDTO \u003d UserDTO.builder()\n                .id(\"123\")\n                .login(\"transporteur99\")\n                .role(Role.ROLE_TRANSPORTEUR.name())\n                .build();\n\n        // ----------- MOCKS -----------\n        when(userMapper.toEntity(any(UserDTO.class))).thenReturn(userEntity);\n        when(userRepository.save(any(User.class))).thenReturn(userEntity);\n        when(userMapper.toDTO(any(User.class))).thenReturn(userDTO);\n\n        // ----------- CALL service -----------\n        UserDTO result \u003d userService.createUser(userDTO);\n\n        // ----------- VERIFY -----------\n        verify(userRepository).save(any(User.class));\n        assertEquals(\"transporteur99\", result.getLogin());\n        assertEquals(\"123\", result.getId(",
+      "aiProbability": 95,
+      "aiTool": "AI Assistant",
+      "detectionMethod": "REALTIME_SPEED_ANALYSIS",
+      "lineCount": 18
     }
   ],
   "toolStats": {
     "AI Assistant": {
-      "usageCount": 363,
-      "totalLines": 845
+      "usageCount": 364,
+      "totalLines": 863
     }
   }
 }
