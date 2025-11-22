@@ -55,8 +55,6 @@ public class ColisTest {
                 .instructionsManutention("avec précaution")
                 .build();
 
-        when(colisMapper.toEntity(dto)).thenReturn(entity);
-
         when(colisRepository.save(entity)).thenReturn(entity);
 
         when(colisMapper.toDTO(entity)).thenReturn(dto);
