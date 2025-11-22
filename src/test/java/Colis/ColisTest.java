@@ -101,8 +101,7 @@ public class ColisTest {
         when(colisMapper.toDTO(colis1)).thenReturn(dto1);
         when(colisMapper.toDTO(colis2)).thenReturn(dto2);
 
-        List<ColisDTO> list =
-                colisService.listColis(Optional.of(ColisType.FRAGILE), Optional.of(StatutColis.EN_ATTENTE), 1, 2);
+        List<ColisDTO> list = colisService.listColis(Optional.of(ColisType.FRAGILE), Optional.of(StatutColis.EN_ATTENTE), 1, 2);
 
         assertEquals(2, list.size());
         assertEquals("1", list.get(0).getId());
