@@ -2530,12 +2530,34 @@
       "aiTool": "AI Assistant",
       "detectionMethod": "REALTIME_SPEED_ANALYSIS",
       "lineCount": 3
+    },
+    {
+      "filePath": "C:/Users/safiy/Downloads/gestion-colis/gestion-colis/src/main/java/com/example/logistique/config/SecurityConfig.java",
+      "timestamp": 1763812214470,
+      "startOffset": 1274,
+      "endOffset": 1307,
+      "codeContent": "\n                                ",
+      "aiProbability": 90,
+      "aiTool": "AI Assistant",
+      "detectionMethod": "REALTIME_SPEED_ANALYSIS",
+      "lineCount": 2
+    },
+    {
+      "filePath": "C:/Users/safiy/Downloads/gestion-colis/gestion-colis/src/main/java/com/example/logistique/config/SecurityConfig.java",
+      "timestamp": 1763812215192,
+      "startOffset": 1299,
+      "endOffset": 1374,
+      "codeContent": "        .requestMatchers(\"/api/users/**\", \"/api/admin/**\").hasRole(\"ADMIN\")",
+      "aiProbability": 90,
+      "aiTool": "AI Assistant",
+      "detectionMethod": "REALTIME_SPEED_ANALYSIS",
+      "lineCount": 1
     }
   ],
   "toolStats": {
     "AI Assistant": {
-      "usageCount": 230,
-      "totalLines": 455
+      "usageCount": 232,
+      "totalLines": 458
     }
   }
 }

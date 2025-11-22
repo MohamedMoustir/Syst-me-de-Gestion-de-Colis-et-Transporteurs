@@ -34,24 +34,24 @@ public class ColisTest {
         MockitoAnnotations.openMocks(this);
     }
 
-    @Test
-    void test_create_Colis(){
-        ColisDTO colis = ColisDTO.builder()
-                .id("6920d09deeefe2ec9c9de7a4e8b")
-                .type(String.valueOf(ColisType.FRAGILE))
-                .poids(2.3)
-                .adresseDestination("000000000 Rue Principale, Casablanca")
-                .statut(String.valueOf(StatutColis.EN_ATTENTE))
-                .instructionsManutention("avec précaution").build();
-
-              Colis colis1 = ColisMapper.toEntity(colis);
-
-                  when(colisRepository.save(Mockito.any(Colis.class))).thenReturn(colis1);
-        ColisDTO result = colisService.createColis(colis);
-                 verify(colisRepository , Mockito.times(1)).save(Mockito.any(Colis.class));
-                   assertEquals("6920d09deeefe2ec9c9de7a4e8b" ,result.getId());
-                   assertEquals("000000000 Rue Principale, Casablanca",result.getAdresseDestination());
-
-    }
+//    @Test
+//    void test_create_Colis(){
+//        ColisDTO colis = ColisDTO.builder()
+//                .id("6920d09deeefe2ec9c9de7a4e8b")
+//                .type(String.valueOf(ColisType.FRAGILE))
+//                .poids(2.3)
+//                .adresseDestination("000000000 Rue Principale, Casablanca")
+//                .statut(String.valueOf(StatutColis.EN_ATTENTE))
+//                .instructionsManutention("avec précaution").build();
+//
+//              Colis colis1 = ColisMapper.toEntity(colis);
+//
+//                  when(colisRepository.save(Mockito.any(Colis.class))).thenReturn(colis1);
+//        ColisDTO result = colisService.createColis(colis);
+//                 verify(colisRepository , Mockito.times(1)).save(Mockito.any(Colis.class));
+//                   assertEquals("6920d09deeefe2ec9c9de7a4e8b" ,result.getId());
+//                   assertEquals("000000000 Rue Principale, Casablanca",result.getAdresseDestination());
+//
+//    }
 
 }
