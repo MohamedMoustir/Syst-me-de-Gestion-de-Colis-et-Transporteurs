@@ -15,7 +15,11 @@ import java.util.Optional;
 @RequestMapping("/api/admin")
 public class TransporteurAdminController {
 
-    private UserServiceImpl userService;
+    private final UserServiceImpl userService;
+
+    public TransporteurAdminController(UserServiceImpl userService) {
+        this.userService = userService;
+    }
 
     @GetMapping("/transporteurs")
     public List<UserDTO> listTransporteurs(

@@ -2827,12 +2827,56 @@
       "aiTool": "AI Assistant",
       "detectionMethod": "REALTIME_SPEED_ANALYSIS",
       "lineCount": 1
+    },
+    {
+      "filePath": "/TransporteurAdminController.java",
+      "timestamp": 1763816652503,
+      "startOffset": 635,
+      "endOffset": 674,
+      "codeContent": "public TransporteurAdminController() {}",
+      "aiProbability": 90,
+      "aiTool": "AI Assistant",
+      "detectionMethod": "REALTIME_SPEED_ANALYSIS",
+      "lineCount": 1
+    },
+    {
+      "filePath": "/TransporteurAdminController.java",
+      "timestamp": 1763816652531,
+      "startOffset": 676,
+      "endOffset": 739,
+      "codeContent": "com.example.logistique.service.impl.UserServiceImpl userService",
+      "aiProbability": 90,
+      "aiTool": "AI Assistant",
+      "detectionMethod": "REALTIME_SPEED_ANALYSIS",
+      "lineCount": 1
+    },
+    {
+      "filePath": "/TransporteurAdminController.java",
+      "timestamp": 1763816652542,
+      "startOffset": 711,
+      "endOffset": 742,
+      "codeContent": "this.userService \u003d userService;",
+      "aiProbability": 90,
+      "aiTool": "AI Assistant",
+      "detectionMethod": "REALTIME_SPEED_ANALYSIS",
+      "lineCount": 1
+    },
+    {
+      "filePath": "C:/Users/safiy/Downloads/gestion-colis/gestion-colis/src/main/java/com/example/logistique/controller/admin/TransporteurAdminController.java",
+      "timestamp": 1763816652565,
+      "startOffset": 635,
+      "endOffset": 752,
+      "codeContent": "\n\n    public TransporteurAdminController(UserServiceImpl userService) {\n        this.userService \u003d userService;\n    }",
+      "aiProbability": 95,
+      "aiTool": "AI Assistant",
+      "detectionMethod": "REALTIME_SPEED_ANALYSIS",
+      "lineCount": 5
     }
   ],
   "toolStats": {
     "AI Assistant": {
-      "usageCount": 257,
-      "totalLines": 497
+      "usageCount": 261,
+      "totalLines": 505
     }
   }
 }

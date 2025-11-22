@@ -19,7 +19,6 @@ public class UserAdminController {
 
     @GetMapping("/users")
     public List<UserDTO> listUsers() {
-        System.out.println("zzzzzzzz");
         return userService.listUsers();
     }
 
