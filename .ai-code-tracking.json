@@ -4004,12 +4004,23 @@
       "aiTool": "AI Assistant",
       "detectionMethod": "REALTIME_SPEED_ANALYSIS",
       "lineCount": 18
+    },
+    {
+      "filePath": "C:/Users/safiy/Downloads/gestion-colis/gestion-colis/src/test/java/Colis/ColisTest.java",
+      "timestamp": 1763830932535,
+      "startOffset": 3360,
+      "endOffset": 3505,
+      "codeContent": "Mapper.toEntity(any(ColisDTO.class))).thenReturn(entity);\nwhen(colisRepository.findByType(any(ColisType.class), eq(pageable))).thenReturn(page);\n",
+      "aiProbability": 90,
+      "aiTool": "AI Assistant",
+      "detectionMethod": "REALTIME_SPEED_ANALYSIS",
+      "lineCount": 3
     }
   ],
   "toolStats": {
     "AI Assistant": {
-      "usageCount": 364,
-      "totalLines": 863
+      "usageCount": 365,
+      "totalLines": 866
     }
   }
 }

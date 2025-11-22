@@ -22,25 +22,23 @@ import java.util.Optional;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.mockito.Mockito.*;
 
-import static org.mockito.Mockito.when;
-
 public class ColisTest {
 
     @Mock
-    private ColisRepository colisRepository ;
+    private ColisRepository colisRepository;
     @Mock
-    private ColisMapper colisMapper ;
+    private ColisMapper colisMapper;
 
     @InjectMocks
     private ColisServiceImpl colisService;
 
     @BeforeEach
-    void setUp(){
+    void setUp() {
         MockitoAnnotations.openMocks(this);
     }
 
     @Test
-    void test_create_Colis(){
+    void test_create_Colis() {
         ColisDTO dto = ColisDTO.builder()
                 .id("6920d09deeefe2ec9c9de7a4e8b")
                 .type("FRAGILE")
@@ -59,20 +57,19 @@ public class ColisTest {
                 .instructionsManutention("avec précaution")
                 .build();
 
-        when(colisMapper.toEntity(any())).thenReturn(entity);
-        when(colisRepository.save(any())).thenReturn(entity);
-        when(colisMapper.toDTO(any())).thenReturn(dto);
+        when(colisMapper.toEntity(any(ColisDTO.class))).thenReturn(entity);
+        when(colisRepository.save(any(Colis.class))).thenReturn(entity);
+        when(colisMapper.toDTO(any(Colis.class))).thenReturn(dto);
 
         ColisDTO result = colisService.createColis(dto);
 
-        verify(colisRepository, times(1)).save(any());
+        verify(colisRepository, times(1)).save(any(Colis.class));
         assertEquals("6920d09deeefe2ec9c9de7a4e8b", result.getId());
         assertEquals("000000000 Rue Principale, Casablanca", result.getAdresseDestination());
-
     }
 
     @Test
-    void test_listColis(){
+    void test_listColis() {
 
         PageRequest pageable = PageRequest.of(0, 2);
 
@@ -97,7 +94,7 @@ public class ColisTest {
         ColisDTO dto1 = ColisDTO.builder().id("1").type("FRAGILE").adresseDestination("Casa 1").build();
         ColisDTO dto2 = ColisDTO.builder().id("2").type("FRAGILE").adresseDestination("Casa 2").build();
 
-        when(colisRepository.findByType(any(), eq(pageable))).thenReturn(page);
+        when(colisRepository.findByType(any(ColisType.class), eq(pageable))).thenReturn(page);
         when(colisMapper.toDTO(colis1)).thenReturn(dto1);
         when(colisMapper.toDTO(colis2)).thenReturn(dto2);
 
@@ -107,6 +104,6 @@ public class ColisTest {
         assertEquals("1", list.get(0).getId());
         assertEquals("2", list.get(1).getId());
 
-        verify(colisRepository, times(1)).findByType(any(), eq(pageable));
+        verify(colisRepository, times(1)).findByType(any(ColisType.class), eq(pageable));
     }
 }
