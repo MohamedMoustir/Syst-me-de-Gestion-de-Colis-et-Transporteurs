@@ -4103,12 +4103,375 @@
       "aiTool": "AI Assistant",
       "detectionMethod": "REALTIME_SPEED_ANALYSIS",
       "lineCount": 1
+    },
+    {
+      "filePath": "C:/Users/safiy/Downloads/gestion-colis/gestion-colis/src/test/java/Colis/ColisTest.java",
+      "timestamp": 1763832792356,
+      "startOffset": 0,
+      "endOffset": 13194,
+      "codeContent": "Pipelines\nAdministration\nDéconnexion\n\n    Systme de Gestion de Colis\n\nActivité\nBranches\nPull requests\n\n    Systme de Gestion de Colis\n\n61\nPipeline\nModifications\nTests\nArtefacts\nDéconnexion\nBranche:\n—\nCommit:\n—\n52s\na few seconds ago\nAucune modification\nReplayed #60\nStart\nCheckout\nBuild JAR\nUnit Tests\nDeploy\nEnd\nUnit Tests - 25s\nRestart Unit Tests\njdk17— Use a tool from a predefined Tool Installation\u003c1s\nFetches the environment variables for a given tool in a list of \u0027FOO\u003dbar\u0027 strings suitable for the withEnv step.\u003c1s\nmaven3— Use a tool from a predefined Tool Installation\u003c1s\nFetches the environment variables for a given tool in a list of \u0027FOO\u003dbar\u0027 strings suitable for the withEnv step.\u003c1s\nRunning unit tests (Mockito only, no DB needed)...— Print Message\u003c1s\nmvn test -Dspring.profiles.active\u003dtest— Shell Script24s\n\n+ mvn test -Dspring.profiles.active\u003dtest\n\n[INFO] Scanning for projects...\n\n[INFO] \n\n[INFO] ----------------\u003c com.example.logistique:gestion-colis \u003e----------------\n\n[INFO] Building gestion-colis 0.0.1-SNAPSHOT\n\n[INFO]   from pom.xml\n\n[INFO] --------------------------------[ jar ]---------------------------------\n\n[INFO] \n\n[INFO] --- resources:3.3.1:resources (default-resources) @ gestion-colis ---\n\n[INFO] Copying 3 resources from src/main/resources to target/classes\n\n[INFO] Copying 0 resource from src/main/resources to target/classes\n\n[INFO] \n\n[INFO] --- compiler:3.14.1:compile (default-compile) @ gestion-colis ---\n\n[INFO] Nothing to compile - all classes are up to date.\n\n[INFO] \n\n[INFO] --- resources:3.3.1:testResources (default-testResources) @ gestion-colis ---\n\n[INFO] skip non existing resourceDirectory /var/jenkins_home/workspace/Systme de Gestion de Colis/src/test/resources\n\n[INFO] \n\n[INFO] --- compiler:3.14.1:testCompile (default-testCompile) @ gestion-colis ---\n\n[INFO] Recompiling the module because of changed source code.\n\n[INFO] Compiling 3 source files with javac [debug parameters release 17] to target/test-classes\n\n[INFO] \n\n[INFO] --- surefire:3.5.4:test (default-test) @ gestion-colis ---\n\n[INFO] Using auto detected provider org.apache.maven.surefire.junitplatform.JUnitPlatformProvider\n\n[INFO] \n\n[INFO] -------------------------------------------------------\n\n[INFO]  T E S T S\n\n[INFO] -------------------------------------------------------\n\n[INFO] Running com.example.logistique.gestion_colis.GestionColisApplicationTests\n\n17:29:48.017 [main] INFO org.springframework.test.context.support.AnnotationConfigContextLoaderUtils -- Could not detect default configuration classes for test class [com.example.logistique.gestion_colis.GestionColisApplicationTests]: GestionColisApplicationTests does not declare any static, non-private, non-final, nested classes annotated with @Configuration.\n\n17:29:48.386 [main] INFO org.springframework.boot.test.context.SpringBootTestContextBootstrapper -- Found @SpringBootConfiguration com.example.logistique.GestionColisApplication for test class com.example.logistique.gestion_colis.GestionColisApplicationTests\n\n17:29:48.660 [main] INFO org.springframework.boot.devtools.restart.RestartApplicationListener -- Restart disabled due to context in which it is running\n\n\n  .   ____          _            __ _ _\n\n /\\\\ / ___\u0027_ __ _ _(_)_ __  __ _ \\ \\ \\ \\\n\n( ( )\\___ | \u0027_ | \u0027_| | \u0027_ \\/ _` | \\ \\ \\ \\\n\n \\\\/  ___)| |_)| | | | | || (_| |  ) ) ) )\n\n  \u0027  |____| .__|_| |_|_| |_\\__, | / / / /\n\n \u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d|_|\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d\u003d|___/\u003d/_/_/_/\n\n\n :: Spring Boot ::                (v3.5.7)\n\n\n2025-11-22T17:29:49.252Z  INFO 11179 --- [logistique] [           main] c.e.l.g.GestionColisApplicationTests     : Starting GestionColisApplicationTests using Java 21.0.9 with PID 11179 (started by root in /var/jenkins_home/workspace/Systme de Gestion de Colis)\n\n2025-11-22T17:29:49.255Z  INFO 11179 --- [logistique] [           main] c.e.l.g.GestionColisApplicationTests     : The following 1 profile is active: \"test\"\n\n2025-11-22T17:29:50.906Z  INFO 11179 --- [logistique] [           main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data MongoDB repositories in DEFAULT mode.\n\n2025-11-22T17:29:51.066Z  INFO 11179 --- [logistique] [           main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 138 ms. Found 2 MongoDB repository interfaces.\n\n2025-11-22T17:29:51.843Z  INFO 11179 --- [logistique] [           main] org.mongodb.driver.client                : MongoClient with metadata {\"driver\": {\"name\": \"mongo-java-driver|sync|spring-boot\", \"version\": \"5.5.2\"}, \"os\": {\"type\": \"Linux\", \"name\": \"Linux\", \"architecture\": \"amd64\", \"version\": \"5.15.167.4-microsoft-standard-WSL2\"}, \"platform\": \"Java/Eclipse Adoptium/21.0.9+10-LTS\", \"env\": {\"container\": {\"runtime\": \"docker\"}}} created with settings MongoClientSettings{readPreference\u003dprimary, writeConcern\u003dWriteConcern{w\u003dnull, wTimeout\u003dnull ms, journal\u003dnull}, retryWrites\u003dtrue, retryReads\u003dtrue, readConcern\u003dReadConcern{level\u003dnull}, credential\u003dnull, transportSettings\u003dnull, commandListeners\u003d[], codecRegistry\u003dProvidersCodecRegistry{codecProviders\u003d[ValueCodecProvider{}, BsonValueCodecProvider{}, DBRefCodecProvider{}, DBObjectCodecProvider{}, DocumentCodecProvider{}, CollectionCodecProvider{}, IterableCodecProvider{}, MapCodecProvider{}, GeoJsonCodecProvider{}, GridFSFileCodecProvider{}, Jsr310CodecProvider{}, JsonObjectCodecProvider{}, BsonCodecProvider{}, EnumCodecProvider{}, com.mongodb.client.model.mql.ExpressionCodecProvider@6b8b5020, com.mongodb.Jep395RecordCodecProvider@7d37ee0c, com.mongodb.KotlinCodecProvider@5a7b309b]}, loggerSettings\u003dLoggerSettings{maxDocumentLength\u003d1000}, clusterSettings\u003d{hosts\u003d[localhost:27017], srvServiceName\u003dmongodb, mode\u003dSINGLE, requiredClusterType\u003dUNKNOWN, requiredReplicaSetName\u003d\u0027null\u0027, serverSelector\u003d\u0027null\u0027, clusterListeners\u003d\u0027[]\u0027, serverSelectionTimeout\u003d\u002730000 ms\u0027, localThreshold\u003d\u002715 ms\u0027}, socketSettings\u003dSocketSettings{connectTimeoutMS\u003d10000, readTimeoutMS\u003d0, receiveBufferSize\u003d0, proxySettings\u003dProxySettings{host\u003dnull, port\u003dnull, username\u003dnull, password\u003dnull}}, heartbeatSocketSettings\u003dSocketSettings{connectTimeoutMS\u003d10000, readTimeoutMS\u003d10000, receiveBufferSize\u003d0, proxySettings\u003dProxySettings{host\u003dnull, port\u003dnull, username\u003dnull, password\u003dnull}}, connectionPoolSettings\u003dConnectionPoolSettings{maxSize\u003d100, minSize\u003d0, maxWaitTimeMS\u003d120000, maxConnectionLifeTimeMS\u003d0, maxConnectionIdleTimeMS\u003d0, maintenanceInitialDelayMS\u003d0, maintenanceFrequencyMS\u003d60000, connectionPoolListeners\u003d[], maxConnecting\u003d2}, serverSettings\u003dServerSettings{heartbeatFrequencyMS\u003d10000, minHeartbeatFrequencyMS\u003d500, serverMonitoringMode\u003dAUTO, serverListeners\u003d\u0027[]\u0027, serverMonitorListeners\u003d\u0027[]\u0027}, sslSettings\u003dSslSettings{enabled\u003dfalse, invalidHostNameAllowed\u003dfalse, context\u003dnull}, applicationName\u003d\u0027null\u0027, compressorList\u003d[], uuidRepresentation\u003dJAVA_LEGACY, serverApi\u003dnull, autoEncryptionSettings\u003dnull, dnsClient\u003dnull, inetAddressResolver\u003dnull, contextProvider\u003dnull, timeoutMS\u003dnull}\n\n2025-11-22T17:29:51.856Z  INFO 11179 --- [logistique] [localhost:27017] org.mongodb.driver.cluster               : Exception in monitor thread while connecting to server localhost:27017\n\n\ncom.mongodb.MongoSocketOpenException: Exception opening socket\n\n\tat com.mongodb.internal.connection.SocketStream.lambda$open$0(SocketStream.java:85) ~[mongodb-driver-core-5.5.2.jar:na]\n\n\tat java.base/java.util.Optional.orElseThrow(Unknown Source) ~[na:na]\n\n\tat com.mongodb.internal.connection.SocketStream.open(SocketStream.java:85) ~[mongodb-driver-core-5.5.2.jar:na]\n\n\tat com.mongodb.internal.connection.InternalStreamConnection.open(InternalStreamConnection.java:233) ~[mongodb-driver-core-5.5.2.jar:na]\n\n\tat com.mongodb.internal.connection.DefaultServerMonitor$ServerMonitor.lookupServerDescription(DefaultServerMonitor.java:219) ~[mongodb-driver-core-5.5.2.jar:na]\n\n\tat com.mongodb.internal.connection.DefaultServerMonitor$ServerMonitor.run(DefaultServerMonitor.java:176) ~[mongodb-driver-core-5.5.2.jar:na]\n\nCaused by: java.net.ConnectException: Connection refused\n\n\tat java.base/sun.nio.ch.Net.pollConnect(Native Method) ~[na:na]\n\n\tat java.base/sun.nio.ch.Net.pollConnectNow(Unknown Source) ~[na:na]\n\n\tat java.base/sun.nio.ch.NioSocketImpl.timedFinishConnect(Unknown Source) ~[na:na]\n\n\tat java.base/sun.nio.ch.NioSocketImpl.connect(Unknown Source) ~[na:na]\n\n\tat java.base/java.net.SocksSocketImpl.connect(Unknown Source) ~[na:na]\n\n\tat java.base/java.net.Socket.connect(Unknown Source) ~[na:na]\n\n\tat com.mongodb.internal.connection.SocketStreamHelper.initialize(SocketStreamHelper.java:76) ~[mongodb-driver-core-5.5.2.jar:na]\n\n\tat com.mongodb.internal.connection.SocketStream.initializeSocket(SocketStream.java:104) ~[mongodb-driver-core-5.5.2.jar:na]\n\n\tat com.mongodb.internal.connection.SocketStream.open(SocketStream.java:79) ~[mongodb-driver-core-5.5.2.jar:na]\n\n\t... 3 common frames omitted\n\n\n2025-11-22T17:29:53.319Z  WARN 11179 --- [logistique] [           main] .s.s.UserDetailsServiceAutoConfiguration : \n\n\nUsing generated security password: 365ae356-194e-41db-96d2-a8573187d36e\n\n\nThis generated password is for development use only. Your security configuration must be updated before running your application in production.\n\n\n2025-11-22T17:29:53.344Z  INFO 11179 --- [logistique] [           main] r$InitializeUserDetailsManagerConfigurer : Global AuthenticationManager configured with UserDetailsService bean with name inMemoryUserDetailsManager\n\n2025-11-22T17:29:54.024Z  INFO 11179 --- [logistique] [           main] c.e.l.g.GestionColisApplicationTests     : Started GestionColisApplicationTests in 5.389 seconds (process running for 7.226)\n\nMockito is currently self-attaching to enable the inline-mock-maker. This will no longer work in future releases of the JDK. Please add Mockito as an agent to your build as described in Mockito\u0027s documentation: https://javadoc.io/doc/org.mockito/mockito-core/latest/org.mockito/org/mockito/Mockito.html#0.3\n\nWARNING: A Java agent has been loaded dynamically (/root/.m2/repository/net/bytebuddy/byte-buddy-agent/1.17.8/byte-buddy-agent-1.17.8.jar)\n\nWARNING: If a serviceability tool is in use, please run with -XX:+EnableDynamicAgentLoading to hide this warning\n\nWARNING: If a serviceability tool is not in use, please run with -Djdk.instrument.traceUsage for more information\n\nWARNING: Dynamic loading of agents will be disallowed by default in a future release\n\n[INFO] Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 7.837 s -- in com.example.logistique.gestion_colis.GestionColisApplicationTests\n\n[INFO] Running Colis.ColisTest\n\n[ERROR] Tests run: 1, Failures: 0, Errors: 1, Skipped: 0, Time elapsed: 1.155 s \u003c\u003c\u003c FAILURE! -- in Colis.ColisTest\n\n[ERROR] Colis.ColisTest.test_create_Colis -- Time elapsed: 1.135 s \u003c\u003c\u003c ERROR!\n\norg.mockito.exceptions.misusing.MissingMethodInvocationException: \n\n\nwhen() requires an argument which has to be \u0027a method call on a mock\u0027.\n\nFor example:\n\n    when(mock.getArticles()).thenReturn(articles);\n\n\nAlso, this error might show up because:\n\n1. you stub either of: final/private/native/equals()/hashCode() methods.\n\n   Those methods *cannot* be stubbed/verified.\n\n   Mocking methods declared on non-public parent classes is not supported.\n\n2. inside when() you don\u0027t call method on mock but on some other object.\n\n\n\tat Colis.ColisTest.test_create_Colis(ColisTest.java:58)\n\n\tat java.base/java.lang.reflect.Method.invoke(Unknown Source)\n\n\tat java.base/java.util.ArrayList.forEach(Unknown Source)\n\n\tat java.base/java.util.ArrayList.forEach(Unknown Source)\n\n\n[INFO] \n\n[INFO] Results:\n\n[INFO] \n\n[ERROR] Errors: \n\n[ERROR]   ColisTest.test_create_Colis:58 MissingMethodInvocation \n\nwhen() requires an argument which has to be \u0027a method call on a mock\u0027.\n\nFor example:\n\n    when(mock.getArticles()).thenReturn(articles);\n\n\nAlso, this error might show up because:\n\n1. you stub either of: final/private/native/equals()/hashCode() methods.\n\n   Those methods *cannot* be stubbed/verified.\n\n   Mocking methods declared on non-public parent classes is not supported.\n\n2. inside when() you don\u0027t call method on mock but on some other object.\n\n\n[INFO] \n\n[ERROR] Tests run: 2, Failures: 0, Errors: 1, Skipped: 0\n\n[INFO] \n\n[INFO] ------------------------------------------------------------------------\n\n[INFO] BUILD FAILURE\n\n[INFO] ------------------------------------------------------------------------\n\n[INFO] Total time:  19.600 s\n\n[INFO] Finished at: 2025-11-22T17:29:56Z\n\n[INFO] ------------------------------------------------------------------------\n\n[ERROR] Failed to execute goal org.apache.maven.plugins:maven-surefire-plugin:3.5.4:test (default-test) on project gestion-colis: \n\n[ERROR] \n\n[ERROR] See /var/jenkins_home/workspace/Systme de Gestion de Colis/target/surefire-reports for the individual test results.\n\n[ERROR] See dump files (if any exist) [date].dump, [date]-jvmRun[N].dump and [date].dumpstream.\n\n[ERROR] -\u003e [Help 1]\n\n[ERROR] \n\n[ERROR] To see the full stack trace of the errors, re-run Maven with the -e switch.\n\n[ERROR] Re-run Maven using the -X switch to enable full debug logging.\n\n[ERROR] \n\n[ERROR] For more information about the errors and possible solutions, please read the following articles:\n\n[ERROR] [Help 1] http://cwiki.apache.org/confluence/display/MAVEN/MojoFailureException\n\nscript returned exit code 1",
+      "aiProbability": 70,
+      "aiTool": "AI Assistant",
+      "detectionMethod": "REALTIME_SPEED_ANALYSIS",
+      "lineCount": 302
+    },
+    {
+      "filePath": "C:/Users/safiy/Downloads/gestion-colis/gestion-colis/src/test/java/Colis/ColisTest.java",
+      "timestamp": 1763832795197,
+      "startOffset": 1901,
+      "endOffset": 1961,
+      "codeContent": "        when(colisMapper.toEntity(dto)).thenReturn(entity);\n",
+      "aiProbability": 70,
+      "aiTool": "AI Assistant",
+      "detectionMethod": "REALTIME_SPEED_ANALYSIS",
+      "lineCount": 2
+    },
+    {
+      "filePath": "C:/Users/safiy/Downloads/gestion-colis/gestion-colis/src/test/java/Colis/ColisTest.java",
+      "timestamp": 1763832795249,
+      "startOffset": 1961,
+      "endOffset": 1981,
+      "codeContent": "// **يجب إضافة هذا**",
+      "aiProbability": 90,
+      "aiTool": "AI Assistant",
+      "detectionMethod": "REALTIME_SPEED_ANALYSIS",
+      "lineCount": 1
+    },
+    {
+      "filePath": "C:/Users/safiy/Downloads/gestion-colis/gestion-colis/src/test/java/Colis/ColisTest.java",
+      "timestamp": 1763832795310,
+      "startOffset": 1983,
+      "endOffset": 2020,
+      "codeContent": "        // 2. حفظ Entity في المستودع\n",
+      "aiProbability": 90,
+      "aiTool": "AI Assistant",
+      "detectionMethod": "REALTIME_SPEED_ANALYSIS",
+      "lineCount": 2
+    },
+    {
+      "filePath": "C:/Users/safiy/Downloads/gestion-colis/gestion-colis/src/test/java/Colis/ColisTest.java",
+      "timestamp": 1763832795380,
+      "startOffset": 2084,
+      "endOffset": 2135,
+      "codeContent": "        // 3. تحويل Entity الناتج إلى DTO للمستخدم\n",
+      "aiProbability": 90,
+      "aiTool": "AI Assistant",
+      "detectionMethod": "REALTIME_SPEED_ANALYSIS",
+      "lineCount": 2
+    },
+    {
+      "filePath": "C:/Users/safiy/Downloads/gestion-colis/gestion-colis/src/test/java/Colis/ColisTest.java",
+      "timestamp": 1763832795687,
+      "startOffset": 3906,
+      "endOffset": 3937,
+      "codeContent": "        // التحقق من الاستدعاء\n",
+      "aiProbability": 90,
+      "aiTool": "AI Assistant",
+      "detectionMethod": "REALTIME_SPEED_ANALYSIS",
+      "lineCount": 2
+    },
+    {
+      "filePath": "C:/Users/safiy/Downloads/gestion-colis/gestion-colis/src/test/java/Colis/ColisTest.java",
+      "timestamp": 1763832795819,
+      "startOffset": 3448,
+      "endOffset": 3485,
+      "codeContent": "        // 2. Mocking لـ ColisMapper\n",
+      "aiProbability": 90,
+      "aiTool": "AI Assistant",
+      "detectionMethod": "REALTIME_SPEED_ANALYSIS",
+      "lineCount": 2
+    },
+    {
+      "filePath": "C:/Users/safiy/Downloads/gestion-colis/gestion-colis/src/test/java/Colis/ColisTest.java",
+      "timestamp": 1763832795876,
+      "startOffset": 3485,
+      "endOffset": 3563,
+      "codeContent": "        // يجب أن يتم استدعاء toDTO لكل كائن داخل القائمة المرجعة من الـ Page\n",
+      "aiProbability": 90,
+      "aiTool": "AI Assistant",
+      "detectionMethod": "REALTIME_SPEED_ANALYSIS",
+      "lineCount": 2
+    },
+    {
+      "filePath": "C:/Users/safiy/Downloads/gestion-colis/gestion-colis/src/test/java/Colis/ColisTest.java",
+      "timestamp": 1763832795937,
+      "startOffset": 3344,
+      "endOffset": 3580,
+      "codeContent": " // 1. إصلاح خطأ MissingMethodInvocationException:\n        //    نفترض أن دالة الخدمة listColis تنادي findByTypeAndStatut (لأنها تأخذ وسيطتين)\n        //    إذا كانت الدالة الفعلية في Service هي findByType، يجب أن يكون Stubbing كالتالي:",
+      "aiProbability": 90,
+      "aiTool": "AI Assistant",
+      "detectionMethod": "REALTIME_SPEED_ANALYSIS",
+      "lineCount": 3
+    },
+    {
+      "filePath": "C:/Users/safiy/Downloads/gestion-colis/gestion-colis/src/test/java/Colis/ColisTest.java",
+      "timestamp": 1763832795997,
+      "startOffset": 2470,
+      "endOffset": 2516,
+      "codeContent": " // تغيير إلى 1 للصفحة (بما أنك تمرر 1 للدالة)",
+      "aiProbability": 90,
+      "aiTool": "AI Assistant",
+      "detectionMethod": "REALTIME_SPEED_ANALYSIS",
+      "lineCount": 1
+    },
+    {
+      "filePath": "C:/Users/safiy/Downloads/gestion-colis/gestion-colis/src/test/java/Colis/ColisTest.java",
+      "timestamp": 1763832796062,
+      "startOffset": 1962,
+      "endOffset": 1991,
+      "codeContent": "// يفضل استخدام الكائن الفعلي",
+      "aiProbability": 90,
+      "aiTool": "AI Assistant",
+      "detectionMethod": "REALTIME_SPEED_ANALYSIS",
+      "lineCount": 1
+    },
+    {
+      "filePath": "C:/Users/safiy/Downloads/gestion-colis/gestion-colis/src/test/java/Colis/ColisTest.java",
+      "timestamp": 1763832796128,
+      "startOffset": 2055,
+      "endOffset": 2084,
+      "codeContent": "// يفضل استخدام الكائن الفعلي",
+      "aiProbability": 90,
+      "aiTool": "AI Assistant",
+      "detectionMethod": "REALTIME_SPEED_ANALYSIS",
+      "lineCount": 1
+    },
+    {
+      "filePath": "C:/Users/safiy/Downloads/gestion-colis/gestion-colis/src/test/java/Colis/ColisTest.java",
+      "timestamp": 1763832796190,
+      "startOffset": 2141,
+      "endOffset": 2171,
+      "codeContent": " // يفضل استخدام الكائن الفعلي",
+      "aiProbability": 90,
+      "aiTool": "AI Assistant",
+      "detectionMethod": "REALTIME_SPEED_ANALYSIS",
+      "lineCount": 1
+    },
+    {
+      "filePath": "C:/Users/safiy/Downloads/gestion-colis/gestion-colis/src/test/java/Colis/ColisTest.java",
+      "timestamp": 1763832796256,
+      "startOffset": 2231,
+      "endOffset": 2307,
+      "codeContent": "        // هنا نستخدم any() للتحقق من أن أي كائن Colis قد تم حفظه مرة واحدة\n",
+      "aiProbability": 90,
+      "aiTool": "AI Assistant",
+      "detectionMethod": "REALTIME_SPEED_ANALYSIS",
+      "lineCount": 2
+    },
+    {
+      "filePath": "C:/Users/safiy/Downloads/gestion-colis/gestion-colis/src/test/java/Colis/ColisTest.java",
+      "timestamp": 1763832796323,
+      "startOffset": 1902,
+      "endOffset": 1990,
+      "codeContent": "        // هنا تم تبسيط الـ stubbing باستخدام الكائنات الفعلية بدلاً من any() بشكل مفرط\n",
+      "aiProbability": 90,
+      "aiTool": "AI Assistant",
+      "detectionMethod": "REALTIME_SPEED_ANALYSIS",
+      "lineCount": 2
+    },
+    {
+      "filePath": "C:/Users/safiy/Downloads/gestion-colis/gestion-colis/src/test/java/Colis/ColisTest.java",
+      "timestamp": 1763832796390,
+      "startOffset": 1135,
+      "endOffset": 1217,
+      "codeContent": "    // تم حذف دالة setUp() لأن @ExtendWith(MockitoExtension.class) يقوم بالتهيئة.\n",
+      "aiProbability": 90,
+      "aiTool": "AI Assistant",
+      "detectionMethod": "REALTIME_SPEED_ANALYSIS",
+      "lineCount": 2
+    },
+    {
+      "filePath": "C:/Users/safiy/Downloads/gestion-colis/gestion-colis/src/test/java/Colis/ColisTest.java",
+      "timestamp": 1763832796439,
+      "startOffset": 757,
+      "endOffset": 789,
+      "codeContent": "// يجب إضافة استيراد لـ Pageable",
+      "aiProbability": 90,
+      "aiTool": "AI Assistant",
+      "detectionMethod": "REALTIME_SPEED_ANALYSIS",
+      "lineCount": 1
+    },
+    {
+      "filePath": "C:/Users/safiy/Downloads/gestion-colis/gestion-colis/src/test/java/Colis/ColisTest.java",
+      "timestamp": 1763832796616,
+      "startOffset": 938,
+      "endOffset": 970,
+      "codeContent": "org.junit.jupiter.api.extension.",
+      "aiProbability": 90,
+      "aiTool": "AI Assistant",
+      "detectionMethod": "REALTIME_SPEED_ANALYSIS",
+      "lineCount": 1
+    },
+    {
+      "filePath": "C:/Users/safiy/Downloads/gestion-colis/gestion-colis/src/test/java/Colis/ColisTest.java",
+      "timestamp": 1763832796656,
+      "startOffset": 898,
+      "endOffset": 924,
+      "codeContent": "org.mockito.junit.jupiter.",
+      "aiProbability": 90,
+      "aiTool": "AI Assistant",
+      "detectionMethod": "REALTIME_SPEED_ANALYSIS",
+      "lineCount": 1
+    },
+    {
+      "filePath": "C:/Users/safiy/Downloads/gestion-colis/gestion-colis/src/test/java/Colis/ColisTest.java",
+      "timestamp": 1763832796771,
+      "startOffset": 1879,
+      "endOffset": 1911,
+      "codeContent": "        // صححنا النوع في any()\n",
+      "aiProbability": 90,
+      "aiTool": "AI Assistant",
+      "detectionMethod": "REALTIME_SPEED_ANALYSIS",
+      "lineCount": 2
+    },
+    {
+      "filePath": "C:/Users/safiy/Downloads/gestion-colis/gestion-colis/src/test/java/Colis/ColisTest.java",
+      "timestamp": 1763832796836,
+      "startOffset": 3380,
+      "endOffset": 3419,
+      "codeContent": "        // حددنا النوع الصحيح في any()\n",
+      "aiProbability": 90,
+      "aiTool": "AI Assistant",
+      "detectionMethod": "REALTIME_SPEED_ANALYSIS",
+      "lineCount": 2
+    },
+    {
+      "filePath": "C:/Users/safiy/Downloads/gestion-colis/gestion-colis/src/test/java/Colis/ColisTest.java",
+      "timestamp": 1763832797037,
+      "startOffset": 737,
+      "endOffset": 773,
+      "codeContent": "import java.util.stream.Collectors;\n",
+      "aiProbability": 90,
+      "aiTool": "AI Assistant",
+      "detectionMethod": "REALTIME_SPEED_ANALYSIS",
+      "lineCount": 2
+    },
+    {
+      "filePath": "C:/Users/safiy/Downloads/gestion-colis/gestion-colis/src/test/java/Colis/ColisTest.java",
+      "timestamp": 1763832797085,
+      "startOffset": 687,
+      "endOffset": 715,
+      "codeContent": "import java.util.ArrayList;\n",
+      "aiProbability": 90,
+      "aiTool": "AI Assistant",
+      "detectionMethod": "REALTIME_SPEED_ANALYSIS",
+      "lineCount": 2
+    },
+    {
+      "filePath": "C:/Users/safiy/Downloads/gestion-colis/gestion-colis/src/test/java/Colis/ColisTest.java",
+      "timestamp": 1763832797157,
+      "startOffset": 501,
+      "endOffset": 529,
+      "codeContent": "import org.mockito.Mockito;\n",
+      "aiProbability": 90,
+      "aiTool": "AI Assistant",
+      "detectionMethod": "REALTIME_SPEED_ANALYSIS",
+      "lineCount": 2
+    },
+    {
+      "filePath": "C:/Users/safiy/Downloads/gestion-colis/gestion-colis/src/test/java/Colis/ColisTest.java",
+      "timestamp": 1763832797213,
+      "startOffset": 2569,
+      "endOffset": 2589,
+      "codeContent": "        // Entities\n",
+      "aiProbability": 90,
+      "aiTool": "AI Assistant",
+      "detectionMethod": "REALTIME_SPEED_ANALYSIS",
+      "lineCount": 2
+    },
+    {
+      "filePath": "C:/Users/safiy/Downloads/gestion-colis/gestion-colis/src/test/java/Colis/ColisTest.java",
+      "timestamp": 1763832797456,
+      "startOffset": 2026,
+      "endOffset": 2474,
+      "codeContent": "Colis colis1 \u003d colisMapper.toEntity(colis);\n\n                  when(colisRepository.save(Mockito.any(Colis.class))).thenReturn(colis1);\n                  ColisDTO result \u003d colisService.createColis(colis);\n                 verify(colisRepository , Mockito.times(1)).save(Mockito.any(Colis.class));\n                   assertEquals(\"6920d09deeefe2ec9c9de7a4e8b\" ,result.getId());\n                   assertEquals(\"000000000 Rue Principale, Casablanca\",",
+      "aiProbability": 90,
+      "aiTool": "AI Assistant",
+      "detectionMethod": "REALTIME_SPEED_ANALYSIS",
+      "lineCount": 7
+    },
+    {
+      "filePath": "C:/Users/safiy/Downloads/gestion-colis/gestion-colis/src/test/java/Colis/ColisTest.java",
+      "timestamp": 1763832806306,
+      "startOffset": 397,
+      "endOffset": 4029,
+      "codeContent": "Test;\nimport org.junit.jupiter.api.extension.ExtendWith;\nimport org.mockito.InjectMocks;\nimport org.mockito.Mock;\nimport org.mockito.junit.jupiter.MockitoExtension;\nimport org.springframework.data.domain.Page;\nimport org.springframework.data.domain.PageImpl;\nimport org.springframework.data.domain.PageRequest;\nimport org.springframework.data.domain.Pageable;\n\nimport java.util.List;\nimport java.util.Optional;\n\nimport static org.junit.jupiter.api.Assertions.assertEquals;\nimport static org.mockito.Mockito.*;\n\n@ExtendWith(MockitoExtension.class)\npublic class ColisTest {\n\n    @Mock\n    private ColisRepository colisRepository;\n    @Mock\n    private ColisMapper colisMapper;\n\n    @InjectMocks\n    private ColisServiceImpl colisService;\n\n\n    @Test\n    void test_create_Colis() {\n        ColisDTO dto \u003d ColisDTO.builder()\n                .id(\"6920d09deeefe2ec9c9de7a4e8b\")\n                .type(\"FRAGILE\")\n                .poids(2.3)\n                .adresseDestination(\"000000000 Rue Principale, Casablanca\")\n                .statut(\"EN_ATTENTE\")\n                .instructionsManutention(\"avec précaution\")\n                .build();\n\n        Colis entity \u003d Colis.builder()\n                .id(\"6920d09deeefe2ec9c9de7a4e8b\")\n                .type(ColisType.FRAGILE)\n                .poids(2.3)\n                .adresseDestination(\"000000000 Rue Principale, Casablanca\")\n                .statut(StatutColis.EN_ATTENTE)\n                .instructionsManutention(\"avec précaution\")\n                .build();\n\n        when(colisRepository.save(entity)).thenReturn(entity);\n\n        when(colisMapper.toDTO(entity)).thenReturn(dto);\n\n        ColisDTO result \u003d colisService.createColis(dto);\n\n        verify(colisRepository, times(1)).save(any(Colis.class));\n        assertEquals(\"6920d09deeefe2ec9c9de7a4e8b\", result.getId());\n        assertEquals(\"000000000 Rue Principale, Casablanca\", result.getAdresseDestination());\n    }\n\n//    @Test\n//    void test_listColis() {\n//\n//        PageRequest pageable \u003d PageRequest.of(1, 2);\n//\n//        Colis colis1 \u003d Colis.builder()\n//                .id(\"1\")\n//                .type(ColisType.FRAGILE)\n//                .poids(2.3)\n//                .adresseDestination(\"Casa 1\")\n//                .statut(StatutColis.EN_ATTENTE)\n//                .instructionsManutention(\"Test\").build();\n//\n//        Colis colis2 \u003d Colis.builder()\n//                .id(\"2\")\n//                .type(ColisType.FRAGILE)\n//                .poids(1.3)\n//                .adresseDestination(\"Casa 2\")\n//                .statut(StatutColis.EN_ATTENTE)\n//                .instructionsManutention(\"Test\").build();\n//\n//        Page\u003cColis\u003e page \u003d new PageImpl\u003c\u003e(List.of(colis1, colis2), pageable, 2);\n//\n//        ColisDTO dto1 \u003d ColisDTO.builder().id(\"1\").type(\"FRAGILE\").adresseDestination(\"Casa 1\").build();\n//        ColisDTO dto2 \u003d ColisDTO.builder().id(\"2\").type(\"FRAGILE\").adresseDestination(\"Casa 2\").build();\n//\n//\n//        when(colisRepository.findByType(any(ColisType.class), any(Pageable.class))).thenReturn(page);\n//\n//        when(colisMapper.toDTO(colis1)).thenReturn(dto1);\n//        when(colisMapper.toDTO(colis2)).thenReturn(dto2);\n//\n//        List\u003cColisDTO\u003e list \u003d colisService.listColis(\n//                Optional.of(ColisType.FRAGILE),\n//                Optional.of(StatutColis.EN_ATTENTE),\n//                1,\n//                2\n//        );\n//\n//        assertEquals(2, list.size());\n//        assertEquals(\"1\", list.get(0).getId());\n//        assertEquals(\"2\", list.get(1).getId());\n//\n//        verify(colisRepository, times(1)).findByType(any(ColisType.class), any(Pageable.class));\n//    }\n}",
+      "aiProbability": 70,
+      "aiTool": "AI Assistant",
+      "detectionMethod": "REALTIME_SPEED_ANALYSIS",
+      "lineCount": 105
+    },
+    {
+      "filePath": "C:/Users/safiy/Downloads/gestion-colis/gestion-colis/src/test/java/Colis/ColisTest.java",
+      "timestamp": 1763832827288,
+      "startOffset": 397,
+      "endOffset": 4029,
+      "codeContent": "Test;\nimport org.junit.jupiter.api.extension.ExtendWith;\nimport org.mockito.InjectMocks;\nimport org.mockito.Mock;\nimport org.mockito.junit.jupiter.MockitoExtension;\nimport org.springframework.data.domain.Page;\nimport org.springframework.data.domain.PageImpl;\nimport org.springframework.data.domain.PageRequest;\nimport org.springframework.data.domain.Pageable;\n\nimport java.util.List;\nimport java.util.Optional;\n\nimport static org.junit.jupiter.api.Assertions.assertEquals;\nimport static org.mockito.Mockito.*;\n\n@ExtendWith(MockitoExtension.class)\npublic class ColisTest {\n\n    @Mock\n    private ColisRepository colisRepository;\n    @Mock\n    private ColisMapper colisMapper;\n\n    @InjectMocks\n    private ColisServiceImpl colisService;\n\n\n    @Test\n    void test_create_Colis() {\n        ColisDTO dto \u003d ColisDTO.builder()\n                .id(\"6920d09deeefe2ec9c9de7a4e8b\")\n                .type(\"FRAGILE\")\n                .poids(2.3)\n                .adresseDestination(\"000000000 Rue Principale, Casablanca\")\n                .statut(\"EN_ATTENTE\")\n                .instructionsManutention(\"avec précaution\")\n                .build();\n\n        Colis entity \u003d Colis.builder()\n                .id(\"6920d09deeefe2ec9c9de7a4e8b\")\n                .type(ColisType.FRAGILE)\n                .poids(2.3)\n                .adresseDestination(\"000000000 Rue Principale, Casablanca\")\n                .statut(StatutColis.EN_ATTENTE)\n                .instructionsManutention(\"avec précaution\")\n                .build();\n\n        when(colisRepository.save(entity)).thenReturn(entity);\n\n        when(colisMapper.toDTO(entity)).thenReturn(dto);\n\n        ColisDTO result \u003d colisService.createColis(dto);\n\n        verify(colisRepository, times(1)).save(any(Colis.class));\n        assertEquals(\"6920d09deeefe2ec9c9de7a4e8b\", result.getId());\n        assertEquals(\"000000000 Rue Principale, Casablanca\", result.getAdresseDestination());\n    }\n\n//    @Test\n//    void test_listColis() {\n//\n//        PageRequest pageable \u003d PageRequest.of(1, 2);\n//\n//        Colis colis1 \u003d Colis.builder()\n//                .id(\"1\")\n//                .type(ColisType.FRAGILE)\n//                .poids(2.3)\n//                .adresseDestination(\"Casa 1\")\n//                .statut(StatutColis.EN_ATTENTE)\n//                .instructionsManutention(\"Test\").build();\n//\n//        Colis colis2 \u003d Colis.builder()\n//                .id(\"2\")\n//                .type(ColisType.FRAGILE)\n//                .poids(1.3)\n//                .adresseDestination(\"Casa 2\")\n//                .statut(StatutColis.EN_ATTENTE)\n//                .instructionsManutention(\"Test\").build();\n//\n//        Page\u003cColis\u003e page \u003d new PageImpl\u003c\u003e(List.of(colis1, colis2), pageable, 2);\n//\n//        ColisDTO dto1 \u003d ColisDTO.builder().id(\"1\").type(\"FRAGILE\").adresseDestination(\"Casa 1\").build();\n//        ColisDTO dto2 \u003d ColisDTO.builder().id(\"2\").type(\"FRAGILE\").adresseDestination(\"Casa 2\").build();\n//\n//\n//        when(colisRepository.findByType(any(ColisType.class), any(Pageable.class))).thenReturn(page);\n//\n//        when(colisMapper.toDTO(colis1)).thenReturn(dto1);\n//        when(colisMapper.toDTO(colis2)).thenReturn(dto2);\n//\n//        List\u003cColisDTO\u003e list \u003d colisService.listColis(\n//                Optional.of(ColisType.FRAGILE),\n//                Optional.of(StatutColis.EN_ATTENTE),\n//                1,\n//                2\n//        );\n//\n//        assertEquals(2, list.size());\n//        assertEquals(\"1\", list.get(0).getId());\n//        assertEquals(\"2\", list.get(1).getId());\n//\n//        verify(colisRepository, times(1)).findByType(any(ColisType.class), any(Pageable.class));\n//    }\n}",
+      "aiProbability": 70,
+      "aiTool": "AI Assistant",
+      "detectionMethod": "REALTIME_SPEED_ANALYSIS",
+      "lineCount": 105
+    },
+    {
+      "filePath": "/ColisTest.java",
+      "timestamp": 1763832832685,
+      "startOffset": 891,
+      "endOffset": 913,
+      "codeContent": "org.junit.jupiter.api.",
+      "aiProbability": 90,
+      "aiTool": "AI Assistant",
+      "detectionMethod": "REALTIME_SPEED_ANALYSIS",
+      "lineCount": 1
+    },
+    {
+      "filePath": "/ColisTest.java",
+      "timestamp": 1763832832691,
+      "startOffset": 368,
+      "endOffset": 408,
+      "codeContent": "import org.junit.jupiter.api.BeforeEach;",
+      "aiProbability": 90,
+      "aiTool": "AI Assistant",
+      "detectionMethod": "REALTIME_SPEED_ANALYSIS",
+      "lineCount": 1
+    },
+    {
+      "filePath": "/ColisTest.java",
+      "timestamp": 1763832832699,
+      "startOffset": 551,
+      "endOffset": 589,
+      "codeContent": "import org.mockito.MockitoAnnotations;",
+      "aiProbability": 90,
+      "aiTool": "AI Assistant",
+      "detectionMethod": "REALTIME_SPEED_ANALYSIS",
+      "lineCount": 1
+    },
+    {
+      "filePath": "C:/Users/safiy/Downloads/gestion-colis/gestion-colis/src/test/java/Colis/ColisTest.java",
+      "timestamp": 1763832832728,
+      "startOffset": 368,
+      "endOffset": 409,
+      "codeContent": "import org.junit.jupiter.api.BeforeEach;\n",
+      "aiProbability": 90,
+      "aiTool": "AI Assistant",
+      "detectionMethod": "REALTIME_SPEED_ANALYSIS",
+      "lineCount": 2
+    },
+    {
+      "filePath": "C:/Users/safiy/Downloads/gestion-colis/gestion-colis/src/test/java/Colis/ColisTest.java",
+      "timestamp": 1763832832730,
+      "startOffset": 552,
+      "endOffset": 591,
+      "codeContent": "import org.mockito.MockitoAnnotations;\n",
+      "aiProbability": 90,
+      "aiTool": "AI Assistant",
+      "detectionMethod": "REALTIME_SPEED_ANALYSIS",
+      "lineCount": 2
     }
   ],
   "toolStats": {
     "AI Assistant": {
-      "usageCount": 373,
-      "totalLines": 1041
+      "usageCount": 406,
+      "totalLines": 1608
     }
   }
 }
