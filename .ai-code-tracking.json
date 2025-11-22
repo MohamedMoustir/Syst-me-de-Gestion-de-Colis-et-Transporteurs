@@ -2585,12 +2585,133 @@
       "aiTool": "AI Assistant",
       "detectionMethod": "REALTIME_SPEED_ANALYSIS",
       "lineCount": 1
+    },
+    {
+      "filePath": "C:/Users/safiy/Downloads/gestion-colis/gestion-colis/src/main/java/com/example/logistique/security/JwtUtil.java",
+      "timestamp": 1763814819473,
+      "startOffset": 512,
+      "endOffset": 557,
+      "codeContent": "Map\u003cString, Object\u003e claims \u003d new HashMap\u003c\u003e();",
+      "aiProbability": 90,
+      "aiTool": "AI Assistant",
+      "detectionMethod": "REALTIME_SPEED_ANALYSIS",
+      "lineCount": 1
+    },
+    {
+      "filePath": "C:/Users/safiy/Downloads/gestion-colis/gestion-colis/src/main/java/com/example/logistique/security/JwtUtil.java",
+      "timestamp": 1763814831000,
+      "startOffset": 276,
+      "endOffset": 301,
+      "codeContent": "import java.util.HashMap;",
+      "aiProbability": 90,
+      "aiTool": "AI Assistant",
+      "detectionMethod": "REALTIME_SPEED_ANALYSIS",
+      "lineCount": 1
+    },
+    {
+      "filePath": "C:/Users/safiy/Downloads/gestion-colis/gestion-colis/src/main/java/com/example/logistique/security/JwtUtil.java",
+      "timestamp": 1763814834109,
+      "startOffset": 302,
+      "endOffset": 323,
+      "codeContent": "import java.util.Map;",
+      "aiProbability": 90,
+      "aiTool": "AI Assistant",
+      "detectionMethod": "REALTIME_SPEED_ANALYSIS",
+      "lineCount": 1
+    },
+    {
+      "filePath": "/AuthService.java",
+      "timestamp": 1763814928105,
+      "startOffset": 1565,
+      "endOffset": 1591,
+      "codeContent": ",user.IntellijIdeaRulezzz ",
+      "aiProbability": 90,
+      "aiTool": "AI Assistant",
+      "detectionMethod": "REALTIME_SPEED_ANALYSIS",
+      "lineCount": 1
+    },
+    {
+      "filePath": "C:/Users/safiy/Downloads/gestion-colis/gestion-colis/src/main/java/com/example/logistique/service/impl/AuthService.java",
+      "timestamp": 1763814950678,
+      "startOffset": 2048,
+      "endOffset": 2073,
+      "codeContent": "user.getRole().toString()",
+      "aiProbability": 90,
+      "aiTool": "AI Assistant",
+      "detectionMethod": "REALTIME_SPEED_ANALYSIS",
+      "lineCount": 1
+    },
+    {
+      "filePath": "C:/Users/safiy/Downloads/gestion-colis/gestion-colis/src/main/java/com/example/logistique/security/JwtFilter.java",
+      "timestamp": 1763815049884,
+      "startOffset": 1495,
+      "endOffset": 1652,
+      "codeContent": "String role \u003d jwtUtil.extractRole(token);\n\n                // 3. بناء قائمة الصلاحيات\n                List\u003cGrantedAuthority\u003e authorities \u003d new ArrayList\u003c\u003e();",
+      "aiProbability": 90,
+      "aiTool": "AI Assistant",
+      "detectionMethod": "REALTIME_SPEED_ANALYSIS",
+      "lineCount": 4
+    },
+    {
+      "filePath": "C:/Users/safiy/Downloads/gestion-colis/gestion-colis/src/main/java/com/example/logistique/security/JwtFilter.java",
+      "timestamp": 1763815056258,
+      "startOffset": 304,
+      "endOffset": 362,
+      "codeContent": "import org.springframework.security.core.GrantedAuthority;",
+      "aiProbability": 90,
+      "aiTool": "AI Assistant",
+      "detectionMethod": "REALTIME_SPEED_ANALYSIS",
+      "lineCount": 1
+    },
+    {
+      "filePath": "C:/Users/safiy/Downloads/gestion-colis/gestion-colis/src/main/java/com/example/logistique/security/JwtFilter.java",
+      "timestamp": 1763815058094,
+      "startOffset": 573,
+      "endOffset": 600,
+      "codeContent": "import java.util.ArrayList;",
+      "aiProbability": 90,
+      "aiTool": "AI Assistant",
+      "detectionMethod": "REALTIME_SPEED_ANALYSIS",
+      "lineCount": 1
+    },
+    {
+      "filePath": "C:/Users/safiy/Downloads/gestion-colis/gestion-colis/src/main/java/com/example/logistique/security/JwtFilter.java",
+      "timestamp": 1763815063399,
+      "startOffset": 630,
+      "endOffset": 652,
+      "codeContent": "import java.util.List;",
+      "aiProbability": 90,
+      "aiTool": "AI Assistant",
+      "detectionMethod": "REALTIME_SPEED_ANALYSIS",
+      "lineCount": 1
+    },
+    {
+      "filePath": "C:/Users/safiy/Downloads/gestion-colis/gestion-colis/src/main/java/com/example/logistique/security/JwtFilter.java",
+      "timestamp": 1763815070056,
+      "startOffset": 1736,
+      "endOffset": 1915,
+      "codeContent": "if (role !\u003d null) {\n                    // إضافة الدور المستخرج (مثل \"ROLE_ADMIN\") كصلاحية\n                    authorities.add(new SimpleGrantedAuthority(role));\n                }",
+      "aiProbability": 90,
+      "aiTool": "AI Assistant",
+      "detectionMethod": "REALTIME_SPEED_ANALYSIS",
+      "lineCount": 4
+    },
+    {
+      "filePath": "C:/Users/safiy/Downloads/gestion-colis/gestion-colis/src/main/java/com/example/logistique/security/JwtFilter.java",
+      "timestamp": 1763815075187,
+      "startOffset": 363,
+      "endOffset": 437,
+      "codeContent": "import org.springframework.security.core.authority.SimpleGrantedAuthority;",
+      "aiProbability": 90,
+      "aiTool": "AI Assistant",
+      "detectionMethod": "REALTIME_SPEED_ANALYSIS",
+      "lineCount": 1
     }
   ],
   "toolStats": {
     "AI Assistant": {
-      "usageCount": 235,
-      "totalLines": 461
+      "usageCount": 246,
+      "totalLines": 478
     }
   }
 }
