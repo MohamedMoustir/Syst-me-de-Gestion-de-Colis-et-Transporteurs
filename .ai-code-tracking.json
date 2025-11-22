@@ -4466,12 +4466,34 @@
       "aiTool": "AI Assistant",
       "detectionMethod": "REALTIME_SPEED_ANALYSIS",
       "lineCount": 2
+    },
+    {
+      "filePath": "C:/Users/safiy/Downloads/gestion-colis/gestion-colis/src/test/java/Colis/ColisTest.java",
+      "timestamp": 1763833338020,
+      "startOffset": 511,
+      "endOffset": 538,
+      "codeContent": "import org.mockito.Mockito;",
+      "aiProbability": 90,
+      "aiTool": "AI Assistant",
+      "detectionMethod": "REALTIME_SPEED_ANALYSIS",
+      "lineCount": 1
+    },
+    {
+      "filePath": "/ColisTest.java",
+      "timestamp": 1763833364550,
+      "startOffset": 1058,
+      "endOffset": 1094,
+      "codeContent": "IntellijIdeaRulezzz  colisRepository",
+      "aiProbability": 90,
+      "aiTool": "AI Assistant",
+      "detectionMethod": "REALTIME_SPEED_ANALYSIS",
+      "lineCount": 1
     }
   ],
   "toolStats": {
     "AI Assistant": {
-      "usageCount": 406,
-      "totalLines": 1608
+      "usageCount": 408,
+      "totalLines": 1610
     }
   }
 }

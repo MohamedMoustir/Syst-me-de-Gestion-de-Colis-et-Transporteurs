@@ -11,6 +11,7 @@ import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
 import org.mockito.InjectMocks;
 import org.mockito.Mock;
+import org.mockito.Mockito;
 import org.mockito.junit.jupiter.MockitoExtension;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
@@ -21,57 +22,67 @@ public class ColisTest {
 
     @Mock
     private ColisRepository colisRepository;
+    @Mock
+    private ColisMapper colisMapper;
 
     @InjectMocks
     private ColisServiceImpl colisService;
 
     @Test
-    void test_create_Colis() {
-        ColisDTO inputDto = ColisDTO.builder()
-                .type("FRAGILE")
+
+
+    void test_create_Colis(){
+
+
+        ColisDTO colis = ColisDTO.builder()
+
+
+                .id("6920d09deeefe2ec9c9de7a4e8b")
+
+
+                .type(String.valueOf(ColisType.FRAGILE))
+
+
                 .poids(2.3)
+
+
                 .adresseDestination("000000000 Rue Principale, Casablanca")
-                .statut("EN_ATTENTE")
-                .build();
-
-        Colis entityBeforeSave = Colis.builder()
-                .type(ColisType.FRAGILE)
-                .poids(2.3)
-                .statut(StatutColis.EN_ATTENTE)
-                .build();
-
-        Colis entityAfterSave = Colis.builder()
-                .id("generated_id_123")
-                .type(ColisType.FRAGILE)
-                .poids(2.3)
-                .statut(StatutColis.EN_ATTENTE)
-                .build();
-
-        ColisDTO expectedResultDto = ColisDTO.builder()
-                .id("generated_id_123")
-                .type("FRAGILE")
-                .statut("EN_ATTENTE")
-                .poids(2.3)
-                .build();
 
 
-        when(ColisMapper.toEntity(inputDto)).thenReturn(entityBeforeSave);
+                .statut(String.valueOf(StatutColis.EN_ATTENTE))
 
 
-        when(colisRepository.save(any(Colis.class))).thenReturn(entityAfterSave);
-
-        when(ColisMapper.toDTO(entityAfterSave)).thenReturn(expectedResultDto);
+                .instructionsManutention("avec précaution").build();
 
 
-        ColisDTO result = colisService.createColis(inputDto);
 
-        verify(colisRepository, times(1)).save(any(Colis.class));
 
-        assertEquals("generated_id_123", result.getId());
-        assertEquals("FRAGILE", result.getType());
-        assertEquals(2.3, result.getPoids());
+
+        Colis colis1 = colisMapper.toEntity(colis);
+
+
+
+
+
+        when(colisRepository.save(Mockito.any(Colis.class))).thenReturn(colis1);
+
+
+        ColisDTO result = colisService.createColis(colis);
+
+
+        verify(colisRepository , Mockito.times(1)).save(Mockito.any(Colis.class));
+
+
+        assertEquals("6920d09deeefe2ec9c9de7a4e8b" ,result.getId());
+
+
+        assertEquals("000000000 Rue Principale, Casablanca",result.getAdresseDestination());
+
+
+
+
+
     }
-
 //    @Test
 //    void test_listColis() {
 //
