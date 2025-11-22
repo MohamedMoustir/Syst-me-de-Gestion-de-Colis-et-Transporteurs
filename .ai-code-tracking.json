@@ -2706,12 +2706,67 @@
       "aiTool": "AI Assistant",
       "detectionMethod": "REALTIME_SPEED_ANALYSIS",
       "lineCount": 1
+    },
+    {
+      "filePath": "/UserAdminController.java",
+      "timestamp": 1763815410039,
+      "startOffset": 356,
+      "endOffset": 387,
+      "codeContent": "public UserAdminController() {}",
+      "aiProbability": 90,
+      "aiTool": "AI Assistant",
+      "detectionMethod": "REALTIME_SPEED_ANALYSIS",
+      "lineCount": 1
+    },
+    {
+      "filePath": "/UserAdminController.java",
+      "timestamp": 1763815410069,
+      "startOffset": 389,
+      "endOffset": 452,
+      "codeContent": "com.example.logistique.service.impl.UserServiceImpl userService",
+      "aiProbability": 90,
+      "aiTool": "AI Assistant",
+      "detectionMethod": "REALTIME_SPEED_ANALYSIS",
+      "lineCount": 1
+    },
+    {
+      "filePath": "/UserAdminController.java",
+      "timestamp": 1763815410076,
+      "startOffset": 424,
+      "endOffset": 455,
+      "codeContent": "this.userService \u003d userService;",
+      "aiProbability": 90,
+      "aiTool": "AI Assistant",
+      "detectionMethod": "REALTIME_SPEED_ANALYSIS",
+      "lineCount": 1
+    },
+    {
+      "filePath": "C:/Users/safiy/Downloads/gestion-colis/gestion-colis/src/main/java/com/example/logistique/controller/admin/UserAdminController.java",
+      "timestamp": 1763815410104,
+      "startOffset": 356,
+      "endOffset": 465,
+      "codeContent": "\n\n    public UserAdminController(UserServiceImpl userService) {\n        this.userService \u003d userService;\n    }",
+      "aiProbability": 95,
+      "aiTool": "AI Assistant",
+      "detectionMethod": "REALTIME_SPEED_ANALYSIS",
+      "lineCount": 5
+    },
+    {
+      "filePath": "/ColisController.java",
+      "timestamp": 1763815472549,
+      "startOffset": 541,
+      "endOffset": 568,
+      "codeContent": "public ColisController() {}",
+      "aiProbability": 90,
+      "aiTool": "AI Assistant",
+      "detectionMethod": "REALTIME_SPEED_ANALYSIS",
+      "lineCount": 1
     }
   ],
   "toolStats": {
     "AI Assistant": {
-      "usageCount": 246,
-      "totalLines": 478
+      "usageCount": 251,
+      "totalLines": 487
     }
   }
 }

@@ -10,7 +10,11 @@ import java.util.List;
 @RequestMapping("/api/admin")
 public class UserAdminController {
 
-    private UserServiceImpl userService;
+    private final UserServiceImpl userService;
+
+    public UserAdminController(UserServiceImpl userService) {
+        this.userService = userService;
+    }
 
 
     @GetMapping("/users")

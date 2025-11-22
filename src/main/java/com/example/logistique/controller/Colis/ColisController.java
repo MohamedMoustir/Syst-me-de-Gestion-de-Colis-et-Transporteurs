@@ -14,8 +14,12 @@ import java.util.Optional;
 @RequestMapping("/api")
 public class ColisController {
 
-    @Autowired
-    private ColisServiceImpl colisService;
+
+    private final ColisServiceImpl colisService;
+
+    public ColisController(ColisServiceImpl colisService) {
+        this.colisService = colisService;
+    }
 
 
     @PatchMapping("/colis/{id}/statut")
