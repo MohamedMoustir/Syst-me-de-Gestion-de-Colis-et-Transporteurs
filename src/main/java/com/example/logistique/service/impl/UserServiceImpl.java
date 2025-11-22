@@ -26,9 +26,9 @@ public class UserServiceImpl {
     public List<UserDTO> listTransporteurs(Optional<Specialite> specialite, int page, int size) {
         Page<User> users;
         if (specialite.isPresent()) {
-            users = userRepository.findByRoleAndTransporteurInfoSpecialite(Role.TRANSPORTEUR, specialite.get(), PageRequest.of(page, size));
+            users = userRepository.findByRoleAndTransporteurInfoSpecialite(Role.ROLE_TRANSPORTEUR, specialite.get(), PageRequest.of(page, size));
         } else {
-            users = userRepository.findByRole(Role.TRANSPORTEUR, PageRequest.of(page, size));
+            users = userRepository.findByRole(Role.ROLE_TRANSPORTEUR, PageRequest.of(page, size));
         }
         return users.stream().map(UserMapper::toDTO).collect(Collectors.toList());
     }
