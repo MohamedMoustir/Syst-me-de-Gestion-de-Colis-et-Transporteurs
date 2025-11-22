@@ -2871,12 +2871,34 @@
       "aiTool": "AI Assistant",
       "detectionMethod": "REALTIME_SPEED_ANALYSIS",
       "lineCount": 5
+    },
+    {
+      "filePath": "C:/Users/safiy/Downloads/gestion-colis/gestion-colis/src/main/java/com/example/logistique/config/GlobalExceptionHandler.java",
+      "timestamp": 1763817164168,
+      "startOffset": 0,
+      "endOffset": 80,
+      "codeContent": "package com.example.logistique.config;\n\npublic class GlobalExceptionHandler {\n}\n",
+      "aiProbability": 90,
+      "aiTool": "AI Assistant",
+      "detectionMethod": "REALTIME_SPEED_ANALYSIS",
+      "lineCount": 5
+    },
+    {
+      "filePath": "C:/Users/safiy/Downloads/gestion-colis/gestion-colis/src/main/java/com/example/logistique/config/GlobalExceptionHandler.java",
+      "timestamp": 1763817172126,
+      "startOffset": 12,
+      "endOffset": 1550,
+      "codeContent": "transportsecure.config;\n\nimport org.springframework.http.HttpStatus;\nimport org.springframework.http.ResponseEntity;\nimport org.springframework.validation.FieldError;\nimport org.springframework.web.bind.MethodArgumentNotValidException;\nimport org.springframework.web.bind.annotation.ControllerAdvice;\nimport org.springframework.web.bind.annotation.ExceptionHandler;\nimport org.slf4j.Logger;\nimport org.slf4j.LoggerFactory;\n\nimport java.util.HashMap;\nimport java.util.Map;\n\n@ControllerAdvice\npublic class GlobalExceptionHandler {\n    private static final Logger logger \u003d LoggerFactory.getLogger(GlobalExceptionHandler.class);\n\n    @ExceptionHandler(MethodArgumentNotValidException.class)\n    public ResponseEntity\u003cMap\u003cString, String\u003e\u003e handleValidationErrors(MethodArgumentNotValidException ex) {\n        logger.warn(\"⚠️ Validation failed: {}\", ex.getMessage());\n        Map\u003cString, String\u003e errors \u003d new HashMap\u003c\u003e();\n\n        for (FieldError error : ex.getBindingResult().getFieldErrors()) {\n            errors.put(error.getField(), error.getDefaultMessage());\n        }\n\n        return ResponseEntity.badRequest().body(errors);\n    }\n\n    @ExceptionHandler(RuntimeException.class)\n    public ResponseEntity\u003cMap\u003cString, String\u003e\u003e handleRuntimeException(RuntimeException ex) {\n        logger.error(\"🔥 Unexpected error occurred: {}\", ex.getMessage(), ex);\n        Map\u003cString, String\u003e response \u003d new HashMap\u003c\u003e();\n        response.put(\"error\", ex.getMessage());\n        return ResponseEntity.status(HttpStatus.BAD_REQUEST).body(response);\n    }",
+      "aiProbability": 90,
+      "aiTool": "AI Assistant",
+      "detectionMethod": "REALTIME_SPEED_ANALYSIS",
+      "lineCount": 37
     }
   ],
   "toolStats": {
     "AI Assistant": {
-      "usageCount": 261,
-      "totalLines": 505
+      "usageCount": 263,
+      "totalLines": 547
     }
   }
 }
