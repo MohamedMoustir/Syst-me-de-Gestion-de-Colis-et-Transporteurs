@@ -18,6 +18,12 @@ pipeline {
                 sh 'mvn clean package -DskipTests'
             }
         }
+        stage('Run Tests') {
+            steps {
+                sh 'mvn test'
+            }
+        }
+
         stage('Deploy') {
             steps {
                 sh 'docker-compose down || true'
