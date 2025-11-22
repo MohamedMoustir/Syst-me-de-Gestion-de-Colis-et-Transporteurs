@@ -56,7 +56,9 @@ public class ColisTest {
                 .build();
 
         when(colisMapper.toEntity(dto)).thenReturn(entity);
+
         when(colisRepository.save(entity)).thenReturn(entity);
+
         when(colisMapper.toDTO(entity)).thenReturn(dto);
 
         ColisDTO result = colisService.createColis(dto);

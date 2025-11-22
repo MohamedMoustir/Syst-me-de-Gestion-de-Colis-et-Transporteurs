@@ -4092,12 +4092,23 @@
       "aiTool": "AI Assistant",
       "detectionMethod": "REALTIME_SPEED_ANALYSIS",
       "lineCount": 113
+    },
+    {
+      "filePath": "/ColisTest.java",
+      "timestamp": 1763832229403,
+      "startOffset": 1925,
+      "endOffset": 1945,
+      "codeContent": "IntellijIdeaRulezzz ",
+      "aiProbability": 90,
+      "aiTool": "AI Assistant",
+      "detectionMethod": "REALTIME_SPEED_ANALYSIS",
+      "lineCount": 1
     }
   ],
   "toolStats": {
     "AI Assistant": {
-      "usageCount": 372,
-      "totalLines": 1040
+      "usageCount": 373,
+      "totalLines": 1041
     }
   }
 }
