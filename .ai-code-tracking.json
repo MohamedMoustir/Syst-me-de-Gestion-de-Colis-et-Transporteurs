@@ -2761,12 +2761,78 @@
       "aiTool": "AI Assistant",
       "detectionMethod": "REALTIME_SPEED_ANALYSIS",
       "lineCount": 1
+    },
+    {
+      "filePath": "/ColisController.java",
+      "timestamp": 1763815472578,
+      "startOffset": 570,
+      "endOffset": 635,
+      "codeContent": "com.example.logistique.service.impl.ColisServiceImpl colisService",
+      "aiProbability": 90,
+      "aiTool": "AI Assistant",
+      "detectionMethod": "REALTIME_SPEED_ANALYSIS",
+      "lineCount": 1
+    },
+    {
+      "filePath": "/ColisController.java",
+      "timestamp": 1763815472584,
+      "startOffset": 607,
+      "endOffset": 640,
+      "codeContent": "this.colisService \u003d colisService;",
+      "aiProbability": 90,
+      "aiTool": "AI Assistant",
+      "detectionMethod": "REALTIME_SPEED_ANALYSIS",
+      "lineCount": 1
+    },
+    {
+      "filePath": "C:/Users/safiy/Downloads/gestion-colis/gestion-colis/src/main/java/com/example/logistique/controller/Colis/ColisController.java",
+      "timestamp": 1763815472594,
+      "startOffset": 541,
+      "endOffset": 650,
+      "codeContent": "\n\n    public ColisController(ColisServiceImpl colisService) {\n        this.colisService \u003d colisService;\n    }",
+      "aiProbability": 95,
+      "aiTool": "AI Assistant",
+      "detectionMethod": "REALTIME_SPEED_ANALYSIS",
+      "lineCount": 5
+    },
+    {
+      "filePath": "/UserServiceImpl.java",
+      "timestamp": 1763815802345,
+      "startOffset": 569,
+      "endOffset": 589,
+      "codeContent": "IntellijIdeaRulezzz ",
+      "aiProbability": 90,
+      "aiTool": "AI Assistant",
+      "detectionMethod": "REALTIME_SPEED_ANALYSIS",
+      "lineCount": 1
+    },
+    {
+      "filePath": "C:/Users/safiy/Downloads/gestion-colis/gestion-colis/src/main/java/com/example/logistique/service/impl/UserServiceImpl.java",
+      "timestamp": 1763815807056,
+      "startOffset": 569,
+      "endOffset": 600,
+      "codeContent": "org.springframework.stereotype.",
+      "aiProbability": 90,
+      "aiTool": "AI Assistant",
+      "detectionMethod": "REALTIME_SPEED_ANALYSIS",
+      "lineCount": 1
+    },
+    {
+      "filePath": "C:/Users/safiy/Downloads/gestion-colis/gestion-colis/src/main/java/com/example/logistique/service/impl/UserServiceImpl.java",
+      "timestamp": 1763815807068,
+      "startOffset": 479,
+      "endOffset": 525,
+      "codeContent": "import org.springframework.stereotype.Service;",
+      "aiProbability": 90,
+      "aiTool": "AI Assistant",
+      "detectionMethod": "REALTIME_SPEED_ANALYSIS",
+      "lineCount": 1
     }
   ],
   "toolStats": {
     "AI Assistant": {
-      "usageCount": 251,
-      "totalLines": 487
+      "usageCount": 257,
+      "totalLines": 497
     }
   }
 }
