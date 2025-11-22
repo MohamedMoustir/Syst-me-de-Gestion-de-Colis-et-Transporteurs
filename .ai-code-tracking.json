@@ -4015,12 +4015,67 @@
       "aiTool": "AI Assistant",
       "detectionMethod": "REALTIME_SPEED_ANALYSIS",
       "lineCount": 3
+    },
+    {
+      "filePath": "C:/Users/safiy/Downloads/gestion-colis/gestion-colis/src/test/java/Colis/ColisTest.java",
+      "timestamp": 1763831292755,
+      "startOffset": 540,
+      "endOffset": 590,
+      "codeContent": "import org.mockito.junit.jupiter.MockitoExtension;",
+      "aiProbability": 90,
+      "aiTool": "AI Assistant",
+      "detectionMethod": "REALTIME_SPEED_ANALYSIS",
+      "lineCount": 1
+    },
+    {
+      "filePath": "C:/Users/safiy/Downloads/gestion-colis/gestion-colis/src/test/java/Colis/ColisTest.java",
+      "timestamp": 1763831295807,
+      "startOffset": 444,
+      "endOffset": 494,
+      "codeContent": "import org.junit.jupiter.api.extension.ExtendWith;",
+      "aiProbability": 90,
+      "aiTool": "AI Assistant",
+      "detectionMethod": "REALTIME_SPEED_ANALYSIS",
+      "lineCount": 1
+    },
+    {
+      "filePath": "C:/Users/safiy/Downloads/gestion-colis/gestion-colis/src/test/java/User/UserTest.java",
+      "timestamp": 1763831304450,
+      "startOffset": 659,
+      "endOffset": 694,
+      "codeContent": "@ExtendWith(MockitoExtension.class)",
+      "aiProbability": 90,
+      "aiTool": "AI Assistant",
+      "detectionMethod": "REALTIME_SPEED_ANALYSIS",
+      "lineCount": 1
+    },
+    {
+      "filePath": "C:/Users/safiy/Downloads/gestion-colis/gestion-colis/src/test/java/User/UserTest.java",
+      "timestamp": 1763831309504,
+      "startOffset": 382,
+      "endOffset": 432,
+      "codeContent": "import org.junit.jupiter.api.extension.ExtendWith;",
+      "aiProbability": 90,
+      "aiTool": "AI Assistant",
+      "detectionMethod": "REALTIME_SPEED_ANALYSIS",
+      "lineCount": 1
+    },
+    {
+      "filePath": "C:/Users/safiy/Downloads/gestion-colis/gestion-colis/src/test/java/User/UserTest.java",
+      "timestamp": 1763831313880,
+      "startOffset": 528,
+      "endOffset": 578,
+      "codeContent": "import org.mockito.junit.jupiter.MockitoExtension;",
+      "aiProbability": 90,
+      "aiTool": "AI Assistant",
+      "detectionMethod": "REALTIME_SPEED_ANALYSIS",
+      "lineCount": 1
     }
   ],
   "toolStats": {
     "AI Assistant": {
-      "usageCount": 365,
-      "totalLines": 866
+      "usageCount": 370,
+      "totalLines": 871
     }
   }
 }
