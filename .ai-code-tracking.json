@@ -2552,12 +2552,45 @@
       "aiTool": "AI Assistant",
       "detectionMethod": "REALTIME_SPEED_ANALYSIS",
       "lineCount": 1
+    },
+    {
+      "filePath": "C:/Users/safiy/Downloads/gestion-colis/gestion-colis/src/main/java/com/example/logistique/model/User.java",
+      "timestamp": 1763813393644,
+      "startOffset": 558,
+      "endOffset": 580,
+      "codeContent": "implements UserDetails",
+      "aiProbability": 90,
+      "aiTool": "AI Assistant",
+      "detectionMethod": "REALTIME_SPEED_ANALYSIS",
+      "lineCount": 1
+    },
+    {
+      "filePath": "/User.java",
+      "timestamp": 1763813395464,
+      "startOffset": 580,
+      "endOffset": 600,
+      "codeContent": "IntellijIdeaRulezzz ",
+      "aiProbability": 90,
+      "aiTool": "AI Assistant",
+      "detectionMethod": "REALTIME_SPEED_ANALYSIS",
+      "lineCount": 1
+    },
+    {
+      "filePath": "C:/Users/safiy/Downloads/gestion-colis/gestion-colis/src/main/java/com/example/logistique/model/User.java",
+      "timestamp": 1763813396574,
+      "startOffset": 452,
+      "endOffset": 517,
+      "codeContent": "import org.springframework.security.core.userdetails.UserDetails;",
+      "aiProbability": 90,
+      "aiTool": "AI Assistant",
+      "detectionMethod": "REALTIME_SPEED_ANALYSIS",
+      "lineCount": 1
     }
   ],
   "toolStats": {
     "AI Assistant": {
-      "usageCount": 232,
-      "totalLines": 458
+      "usageCount": 235,
+      "totalLines": 461
     }
   }
 }

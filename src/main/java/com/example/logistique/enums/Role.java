@@ -1,5 +1,5 @@
 package com.example.logistique.enums;
 
 public enum Role {
-    ADMIN, TRANSPORTEUR
+    ROLE_ADMIN, ROLE_TRANSPORTEUR
 }
