@@ -2893,12 +2893,45 @@
       "aiTool": "AI Assistant",
       "detectionMethod": "REALTIME_SPEED_ANALYSIS",
       "lineCount": 37
+    },
+    {
+      "filePath": "C:/Users/safiy/Downloads/gestion-colis/gestion-colis/src/test/java/Colis/ColisTest.java",
+      "timestamp": 1763822542455,
+      "startOffset": 1418,
+      "endOffset": 1812,
+      "codeContent": "Colis colisEntity \u003d new Colis();\n        colisEntity.setId(colisDTO.getId());\n        colisEntity.setType(colisDTO.getType());\n        colisEntity.setPoids(colisDTO.getPoids());\n        colisEntity.setAdresseDestination(colisDTO.getAdresseDestination());\n        colisEntity.setStatut(colisDTO.getStatut());\n        colisEntity.setInstructionsManutention(colisDTO.getInstructionsManutention());",
+      "aiProbability": 95,
+      "aiTool": "AI Assistant",
+      "detectionMethod": "REALTIME_SPEED_ANALYSIS",
+      "lineCount": 7
+    },
+    {
+      "filePath": "/ColisTest.java",
+      "timestamp": 1763822586656,
+      "startOffset": 1731,
+      "endOffset": 1771,
+      "codeContent": "StatutColis.valueOf(colisDTO.getStatut()",
+      "aiProbability": 90,
+      "aiTool": "AI Assistant",
+      "detectionMethod": "REALTIME_SPEED_ANALYSIS",
+      "lineCount": 1
+    },
+    {
+      "filePath": "C:/Users/safiy/Downloads/gestion-colis/gestion-colis/src/main/resources/application-test.yml.java",
+      "timestamp": 1763822920539,
+      "startOffset": 0,
+      "endOffset": 265,
+      "codeContent": "/**\n * Copyright © 2025 integration-projects-maven. All rights reserved.\n * ClassName application-test.yml.java\n * author 舒一笑不秃头\n * version 1.0.0\n * Description TODO\n * createTime 2025年11月22日 15:48:40\n 技术分享 · 公众号：舒一笑的架构笔记\n */\n\npublic class application-test.yml {\n}\n",
+      "aiProbability": 95,
+      "aiTool": "AI Assistant",
+      "detectionMethod": "REALTIME_SPEED_ANALYSIS",
+      "lineCount": 13
     }
   ],
   "toolStats": {
     "AI Assistant": {
-      "usageCount": 263,
-      "totalLines": 547
+      "usageCount": 266,
+      "totalLines": 568
     }
   }
 }
