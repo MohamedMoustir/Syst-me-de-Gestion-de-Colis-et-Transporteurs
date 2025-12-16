@@ -1,12 +1,18 @@
 spring:
   application:
     name: logistique
-
   profiles:
     active: prod
-
+  data:
+    mongodb:
+      uri: ${SPRING_DATA_MONGODB_URI:mongodb://gestion-colis:123456@mongo:27017/colisdb?authSource=admin}
 
 security:
   jwt:
     secret-key: "ThisIsAVeryLongAndSecureSecretKeyForJWTAuthThatNeedsToBeAtLeast32Characters1234"
     expiration: 3600000
+
+logging:
+  level:
+    root: INFO
+    com.example.logistique: DEBUG

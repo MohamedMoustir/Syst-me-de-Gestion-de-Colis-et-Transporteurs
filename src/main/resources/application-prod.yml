@@ -1,7 +1,7 @@
 spring:
   data:
     mongodb:
-      uri: ${SPRING_DATA_MONGODB_URI}
+      uri: ${SPRING_DATA_MONGODB_URI:mongodb://gestion-colis:123456@mongo:27017/colisdb?authSource=admin}
 
 logging:
   level:

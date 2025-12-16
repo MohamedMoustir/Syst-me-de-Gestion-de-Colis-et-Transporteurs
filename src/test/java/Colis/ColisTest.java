@@ -3,129 +3,197 @@ package Colis;
 import com.example.logistique.dto.ColisDTO;
 import com.example.logistique.enums.ColisType;
 import com.example.logistique.enums.StatutColis;
-import com.example.logistique.mapper.ColisMapper;
 import com.example.logistique.model.Colis;
 import com.example.logistique.repository.ColisRepository;
 import com.example.logistique.service.impl.ColisServiceImpl;
+import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
 import org.mockito.InjectMocks;
 import org.mockito.Mock;
-import org.mockito.Mockito;
 import org.mockito.junit.jupiter.MockitoExtension;
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.PageImpl;
+import org.springframework.data.domain.Pageable;
 
-import static org.junit.jupiter.api.Assertions.assertEquals;
+import java.util.List;
+import java.util.Optional;
+
+import static org.assertj.core.api.Assertions.assertThat;
+import static org.assertj.core.api.Assertions.assertThatThrownBy;
+import static org.mockito.ArgumentMatchers.any;
+import static org.mockito.ArgumentMatchers.eq;
 import static org.mockito.Mockito.*;
 
 @ExtendWith(MockitoExtension.class)
-public class ColisTest {
+class ColisTest {
 
     @Mock
     private ColisRepository colisRepository;
-    @Mock
-    private ColisMapper colisMapper;
 
     @InjectMocks
     private ColisServiceImpl colisService;
 
-    @Test
+    private Colis colis;
+    private ColisDTO colisDTO;
 
+    @BeforeEach
+    void setUp() {
+        colis = Colis.builder()
+                .id("123")
+                .type(ColisType.STANDARD)
+                .statut(StatutColis.EN_ATTENTE)
+                .poids(10.5)
+                .adresseDestination("Paris")
+                .build();
 
-    void test_create_Colis(){
-
-
-        ColisDTO colis = ColisDTO.builder()
-
-
-                .id("6920d09deeefe2ec9c9de7a4e8b")
-
-
-                .type(String.valueOf(ColisType.FRAGILE))
-
-
-                .poids(2.3)
-
-
-                .adresseDestination("000000000 Rue Principale, Casablanca")
-
-
-                .statut(String.valueOf(StatutColis.EN_ATTENTE))
-
-
-                .instructionsManutention("avec précaution").build();
-
-
-
-
-
-        Colis colis1 = colisMapper.toEntity(colis);
-
-
-
-
-
-        when(colisRepository.save(Mockito.any(Colis.class))).thenReturn(colis1);
-
-
-        ColisDTO result = colisService.createColis(colis);
-
-
-        verify(colisRepository , Mockito.times(1)).save(Mockito.any(Colis.class));
-
-
-        assertEquals("6920d09deeefe2ec9c9de7a4e8b" ,result.getId());
-
-
-        assertEquals("000000000 Rue Principale, Casablanca",result.getAdresseDestination());
-
-
-
-
-
+        colisDTO = ColisDTO.builder()
+                .type("STANDARD")
+                .poids(10.5)
+                .adresseDestination("Paris")
+                .build();
     }
-//    @Test
-//    void test_listColis() {
-//
-//        PageRequest pageable = PageRequest.of(1, 2);
-//
-//        Colis colis1 = Colis.builder()
-//                .id("1")
-//                .type(ColisType.FRAGILE)
-//                .poids(2.3)
-//                .adresseDestination("Casa 1")
-//                .statut(StatutColis.EN_ATTENTE)
-//                .instructionsManutention("Test").build();
-//
-//        Colis colis2 = Colis.builder()
-//                .id("2")
-//                .type(ColisType.FRAGILE)
-//                .poids(1.3)
-//                .adresseDestination("Casa 2")
-//                .statut(StatutColis.EN_ATTENTE)
-//                .instructionsManutention("Test").build();
-//
-//        Page<Colis> page = new PageImpl<>(List.of(colis1, colis2), pageable, 2);
-//
-//        ColisDTO dto1 = ColisDTO.builder().id("1").type("FRAGILE").adresseDestination("Casa 1").build();
-//        ColisDTO dto2 = ColisDTO.builder().id("2").type("FRAGILE").adresseDestination("Casa 2").build();
-//
-//
-//        when(colisRepository.findByType(any(ColisType.class), any(Pageable.class))).thenReturn(page);
-//
-//        when(colisMapper.toDTO(colis1)).thenReturn(dto1);
-//        when(colisMapper.toDTO(colis2)).thenReturn(dto2);
-//
-//        List<ColisDTO> list = colisService.listColis(
-//                Optional.of(ColisType.FRAGILE),
-//                Optional.of(StatutColis.EN_ATTENTE),
-//                1,
-//                2
-//        );
-//
-//        assertEquals(2, list.size());
-//        assertEquals("1", list.get(0).getId());
-//        assertEquals("2", list.get(1).getId());
-//
-//        verify(colisRepository, times(1)).findByType(any(ColisType.class), any(Pageable.class));
-//    }
+
+    @Test
+    void createColis_ShouldReturnSavedColisDTO() {
+        when(colisRepository.save(any(Colis.class))).thenReturn(colis);
+
+        ColisDTO result = colisService.createColis(colisDTO);
+
+        assertThat(result).isNotNull();
+        assertThat(result.getAdresseDestination()).isEqualTo("Paris");
+        verify(colisRepository, times(1)).save(any(Colis.class));
+    }
+
+
+    @Test
+    void updateColis_ShouldUpdateAndReturnDTO_WhenColisExists() {
+        String id = "123";
+
+        ColisDTO updateInfo = ColisDTO.builder()
+                .adresseDestination("Lyon")
+                .poids(20.0)
+                .type("FRAGILE")
+                .build();
+
+        when(colisRepository.findById(id)).thenReturn(Optional.of(colis));
+
+        when(colisRepository.save(any(Colis.class))).thenAnswer(invocation -> {
+            Colis savedColis = invocation.getArgument(0);
+            return savedColis;
+        });
+
+        ColisDTO result = colisService.updateColis(id, updateInfo);
+
+        assertThat(result.getAdresseDestination()).isEqualTo("Lyon");
+        assertThat(result.getPoids()).isEqualTo(20.0);
+        verify(colisRepository).save(any(Colis.class));
+    }
+
+    @Test
+    void updateColis_ShouldThrowException_WhenColisNotFound() {
+        String id = "999";
+        when(colisRepository.findById(id)).thenReturn(Optional.empty());
+
+        assertThatThrownBy(() -> colisService.updateColis(id, colisDTO))
+                .isInstanceOf(RuntimeException.class)
+                .hasMessage("Colis not found");
+
+        verify(colisRepository, never()).save(any());
+    }
+
+    @Test
+    void deleteColis_ShouldCallRepositoryDelete() {
+
+        colisService.deleteColis("123");
+
+
+        verify(colisRepository, times(1)).deleteById("123");
+    }
+
+    @Test
+    void updateStatut_ShouldUpdateStatut() {
+        when(colisRepository.findById("123")).thenReturn(Optional.of(colis));
+        when(colisRepository.save(any(Colis.class))).thenReturn(colis);
+
+
+        colisService.updateStatut("123", StatutColis.LIVRE);
+
+
+        assertThat(colis.getStatut()).isEqualTo(StatutColis.LIVRE);
+        verify(colisRepository).save(colis);
+    }
+
+    @Test
+    void assignTransporteur_ShouldSetTransporteurId() {
+        String transporteurId = "trans-007";
+        when(colisRepository.findById("123")).thenReturn(Optional.of(colis));
+        when(colisRepository.save(any(Colis.class))).thenReturn(colis);
+
+        colisService.assignTransporteur("123", transporteurId);
+
+        assertThat(colis.getTransporteurId()).isEqualTo(transporteurId);
+        verify(colisRepository).save(colis);
+    }
+
+
+    @Test
+    void listColis_ShouldReturnAll_WhenNoFilters() {
+        Page<Colis> pageColis = new PageImpl<>(List.of(colis));
+        when(colisRepository.findAll(any(Pageable.class))).thenReturn(pageColis);
+
+        List<ColisDTO> result = colisService.listColis(Optional.empty(), Optional.empty(), 0, 10);
+
+
+        assertThat(result).hasSize(1);
+        verify(colisRepository).findAll(any(Pageable.class));
+    }
+
+    @Test
+    void listColis_ShouldFilterByTypeAndStatut() {
+
+        Colis fragileColis = Colis.builder()
+                .id("123")
+                .type(ColisType.FRAGILE)
+                .statut(StatutColis.EN_ATTENTE)
+                .build();
+
+        Page<Colis> pageColis = new PageImpl<>(List.of(fragileColis));
+
+        when(colisRepository.findByType(eq(ColisType.FRAGILE), any(Pageable.class)))
+                .thenReturn(pageColis);
+
+        List<ColisDTO> result = colisService.listColis(
+                Optional.of(ColisType.FRAGILE),
+                Optional.of(StatutColis.EN_ATTENTE),
+                0, 10
+        );
+
+        assertThat(result).hasSize(1);
+    }
+
+    @Test
+    void listColis_ShouldReturnEmpty_WhenTypeMatchesButStatutDoesNot() {
+        Colis fragileLivre = Colis.builder()
+                .type(ColisType.FRAGILE)
+                .statut(StatutColis.LIVRE)
+                .build();
+
+        Page<Colis> pageColis = new PageImpl<>(List.of(fragileLivre));
+
+        when(colisRepository.findByType(eq(ColisType.FRAGILE), any(Pageable.class)))
+                .thenReturn(pageColis);
+
+
+        List<ColisDTO> result = colisService.listColis(
+                Optional.of(ColisType.FRAGILE),
+                Optional.of(StatutColis.EN_ATTENTE),
+                0, 10
+        );
+
+
+        assertThat(result).isEmpty();
+    }
+
+
 }
